@@ -12,9 +12,10 @@ class NutsController < ApplicationController
       with_description: Nut.descriptions_for_select,
       with_nut_type: Nut.nut_types_for_select,
       with_nut_size: Nut.nut_sizes_for_select,
+      with_material: Nut.materials_for_select,
       with_width: Nut.widths_for_select,
       with_coating: Nut.coatings_for_select,
-      with_drawing_norm: Nut.drawing_norms_for_select,
+      with_drawing_number: Nut.drawing_numbers_for_select,
       with_where_used_product: Nut.where_used_products_for_select,
       with_where_used_plant: Nut.where_used_plants_for_select,
       with_remark: Nut.remarks_for_select,
@@ -147,10 +148,10 @@ class NutsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def nut_params
-      params.require(:nut).permit(:id, :partnumber, :description, :nut_type, :nut_size, :width, 
-        :drawing_norm, :coating, :where_used_product, :where_used_plant, :remark, :release_status,
+      params.require(:nut).permit(:id, :partnumber, :description, :nut_type, :nut_size, :material, :width, 
+        :drawing_number, :coating, :where_used_product, :where_used_plant, :remark, :release_status,
         :need_to_edit_partnumber, :need_to_edit_description, :need_to_edit_nut_type, 
-        :need_to_edit_nut_size, :need_to_edit_width, :need_to_edit_drawing_norm, 
+        :need_to_edit_nut_size, :need_to_edit_material, :need_to_edit_width, :need_to_edit_drawing_number, 
         :need_to_edit_coating, :need_to_edit_where_used_product, :need_to_edit_where_used_plant, 
         :need_to_edit_remark, :need_to_edit_reason,
         :reason)

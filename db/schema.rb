@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150225091839) do
+ActiveRecord::Schema.define(version: 20150527005539) do
 
   create_table "ac_motors", force: :cascade do |t|
     t.string   "motor_size"
@@ -598,7 +598,7 @@ ActiveRecord::Schema.define(version: 20150225091839) do
     t.string   "nut_type",                        limit: 255
     t.string   "nut_size",                        limit: 255
     t.decimal  "width"
-    t.string   "drawing_norm",                    limit: 255
+    t.string   "drawing_number",                  limit: 255
     t.string   "coating",                         limit: 255
     t.string   "where_used_product",              limit: 255
     t.string   "where_used_plant",                limit: 255
@@ -621,6 +621,7 @@ ActiveRecord::Schema.define(version: 20150225091839) do
     t.datetime "updated_at"
     t.string   "reason",                          limit: 255
     t.boolean  "need_to_edit_reason"
+    t.string   "material"
   end
 
   create_table "plastic_material_imports", force: :cascade do |t|
