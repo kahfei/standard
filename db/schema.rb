@@ -146,23 +146,23 @@ ActiveRecord::Schema.define(version: 20150527011815) do
   end
 
   create_table "anchor_logos", force: :cascade do |t|
-    t.string   "housing_partnumber",                 limit: 255
-    t.string   "housing_supplier",                   limit: 255
+    t.string   "housing_partnumber"
+    t.string   "housing_supplier"
     t.decimal  "anchor_logo_diameter"
-    t.string   "partnumber",                         limit: 255
-    t.string   "anchor_logo_supplier",               limit: 255
-    t.string   "bosch_logo_partnumber",              limit: 255
-    t.string   "bosch_logo_supplier",                limit: 255
-    t.string   "where_used_product",                 limit: 255
-    t.string   "where_used_plant",                   limit: 255
-    t.string   "remark",                             limit: 255
-    t.string   "reason",                             limit: 255
+    t.string   "partnumber"
+    t.string   "anchor_logo_supplier"
+    t.string   "bosch_logo_partnumber"
+    t.string   "bosch_logo_supplier"
+    t.string   "where_used_product"
+    t.string   "where_used_plant"
+    t.string   "remark"
+    t.string   "reason"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "release_status",                     limit: 255
-    t.string   "uploaded_by_section",                limit: 255
-    t.string   "uploader_role",                      limit: 255
-    t.string   "uploader_name",                      limit: 255
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_housing_partnumber"
     t.boolean  "need_to_edit_housing_supplier"
     t.boolean  "need_to_edit_anchor_logo_diameter"
@@ -182,26 +182,26 @@ ActiveRecord::Schema.define(version: 20150527011815) do
   end
 
   create_table "bearings", force: :cascade do |t|
-    t.string   "partnumber",                           limit: 255
-    t.string   "description",                          limit: 255
+    t.string   "partnumber"
+    t.string   "description"
     t.float    "i_dia"
     t.float    "o_dia"
     t.float    "width"
-    t.string   "bearing_type",                         limit: 255
-    t.string   "bearing_no",                           limit: 255
-    t.string   "radial_clearance_um",                  limit: 255
-    t.string   "sealing",                              limit: 255
+    t.string   "bearing_type"
+    t.string   "bearing_no"
+    t.string   "radial_clearance_um"
+    t.string   "sealing"
     t.integer  "max_speed_rpm"
-    t.string   "position_within_product",              limit: 255
-    t.string   "drawing_norm",                         limit: 255
-    t.string   "where_used_product",                   limit: 255
-    t.string   "where_used_plant",                     limit: 255
-    t.string   "supplier",                             limit: 255
-    t.string   "remark",                               limit: 255
-    t.string   "release_status",                       limit: 255
-    t.string   "uploaded_by_section",                  limit: 255
-    t.string   "uploader_role",                        limit: 255
-    t.string   "uploader_name",                        limit: 255
+    t.string   "position_within_product"
+    t.string   "drawing_norm"
+    t.string   "where_used_product"
+    t.string   "where_used_plant"
+    t.string   "supplier"
+    t.string   "remark"
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_partnumber"
     t.boolean  "need_to_edit_description"
     t.boolean  "need_to_edit_i_dia"
@@ -220,7 +220,7 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.boolean  "need_to_edit_remark"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "reason",                               limit: 255
+    t.string   "reason"
     t.boolean  "need_to_edit_reason"
   end
 
@@ -230,19 +230,19 @@ ActiveRecord::Schema.define(version: 20150527011815) do
   end
 
   create_table "brush_holders", force: :cascade do |t|
-    t.string   "partnumber",                              limit: 255
-    t.string   "description",                             limit: 255
-    t.string   "brush_holder_type",                       limit: 255
-    t.string   "material",                                limit: 255
-    t.string   "drawing_norm",                            limit: 255
-    t.string   "corresponding_carbon_brush",              limit: 255
-    t.string   "supplier",                                limit: 255
-    t.string   "where_used_product",                      limit: 255
-    t.string   "where_used_plant",                        limit: 255
-    t.string   "release_status",                          limit: 255
-    t.string   "uploaded_by_section",                     limit: 255
-    t.string   "uploader_role",                           limit: 255
-    t.string   "uploader_name",                           limit: 255
+    t.string   "partnumber"
+    t.string   "description"
+    t.string   "brush_holder_type"
+    t.string   "material"
+    t.string   "drawing_norm"
+    t.string   "corresponding_carbon_brush"
+    t.string   "supplier"
+    t.string   "where_used_product"
+    t.string   "where_used_plant"
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_partnumber"
     t.boolean  "need_to_edit_description"
     t.boolean  "need_to_edit_brush_holder_type"
@@ -254,7 +254,7 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.boolean  "need_to_edit_where_used_plant"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "reason",                                  limit: 255
+    t.string   "reason"
     t.boolean  "need_to_edit_reason"
   end
 
@@ -264,20 +264,20 @@ ActiveRecord::Schema.define(version: 20150527011815) do
   end
 
   create_table "c_clips", force: :cascade do |t|
-    t.string   "partnumber",                      limit: 255
-    t.string   "description",                     limit: 255
-    t.string   "clip_type",                       limit: 255
+    t.string   "partnumber"
+    t.string   "description"
+    t.string   "clip_type"
     t.float    "norminal_diameter"
     t.float    "thickness"
-    t.string   "coating",                         limit: 255
-    t.string   "drawing_norm",                    limit: 255
-    t.string   "where_used_product",              limit: 255
-    t.string   "where_used_plant",                limit: 255
-    t.string   "remark",                          limit: 255
-    t.string   "release_status",                  limit: 255
-    t.string   "uploaded_by_section",             limit: 255
-    t.string   "uploader_role",                   limit: 255
-    t.string   "uploader_name",                   limit: 255
+    t.string   "coating"
+    t.string   "drawing_norm"
+    t.string   "where_used_product"
+    t.string   "where_used_plant"
+    t.string   "remark"
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_partnumber"
     t.boolean  "need_to_edit_description"
     t.boolean  "need_to_edit_clip_type"
@@ -290,32 +290,32 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.boolean  "need_to_edit_remark"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "reason",                          limit: 255
+    t.string   "reason"
     t.boolean  "need_to_edit_reason"
   end
 
   create_table "capacitor_imports", force: :cascade do |t|
-    t.string   "new",        limit: 255
-    t.string   "create",     limit: 255
+    t.string   "new"
+    t.string   "create"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "capacitors", force: :cascade do |t|
-    t.string   "partnumber",                      limit: 255
-    t.string   "description",                     limit: 255
-    t.string   "capacitor_type",                  limit: 255
-    t.string   "capacity",                        limit: 255
-    t.string   "feet",                            limit: 255
-    t.string   "capacitor_class",                 limit: 255
-    t.string   "drawing_norm",                    limit: 255
-    t.string   "where_used_product",              limit: 255
-    t.string   "where_used_plant",                limit: 255
-    t.string   "remark",                          limit: 255
-    t.string   "release_status",                  limit: 255
-    t.string   "uploaded_by_section",             limit: 255
-    t.string   "uploader_role",                   limit: 255
-    t.string   "uploader_name",                   limit: 255
+    t.string   "partnumber"
+    t.string   "description"
+    t.string   "capacitor_type"
+    t.string   "capacity"
+    t.string   "feet"
+    t.string   "capacitor_class"
+    t.string   "drawing_norm"
+    t.string   "where_used_product"
+    t.string   "where_used_plant"
+    t.string   "remark"
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_partnumber"
     t.boolean  "need_to_edit_description"
     t.boolean  "need_to_edit_capacitor_type"
@@ -328,7 +328,7 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.boolean  "need_to_edit_remark"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "reason",                          limit: 255
+    t.string   "reason"
     t.boolean  "need_to_edit_reason"
   end
 
@@ -338,23 +338,23 @@ ActiveRecord::Schema.define(version: 20150527011815) do
   end
 
   create_table "carbon_brushes", force: :cascade do |t|
-    t.string   "partnumber",                                     limit: 255
-    t.string   "description",                                    limit: 255
-    t.string   "components",                                     limit: 255
-    t.string   "cross_sec",                                      limit: 255
+    t.string   "partnumber"
+    t.string   "description"
+    t.string   "components"
+    t.string   "cross_sec"
     t.float    "length"
     t.float    "wire_length_or_spring_free_length"
     t.float    "radius_for_commutator_mm"
-    t.string   "cut_off",                                        limit: 255
-    t.string   "supplier",                                       limit: 255
-    t.string   "drawing_norm",                                   limit: 255
-    t.string   "where_used_product",                             limit: 255
-    t.string   "where_used_plant",                               limit: 255
-    t.string   "remark",                                         limit: 255
-    t.string   "release_status",                                 limit: 255
-    t.string   "uploaded_by_section",                            limit: 255
-    t.string   "uploader_role",                                  limit: 255
-    t.string   "uploader_name",                                  limit: 255
+    t.string   "cut_off"
+    t.string   "supplier"
+    t.string   "drawing_norm"
+    t.string   "where_used_product"
+    t.string   "where_used_plant"
+    t.string   "remark"
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_partnumber"
     t.boolean  "need_to_edit_description"
     t.boolean  "need_to_edit_components"
@@ -370,7 +370,7 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.boolean  "need_to_edit_remark"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "reason",                                         limit: 255
+    t.string   "reason"
     t.boolean  "need_to_edit_reason"
   end
 
@@ -380,17 +380,17 @@ ActiveRecord::Schema.define(version: 20150527011815) do
   end
 
   create_table "connectors", force: :cascade do |t|
-    t.string   "partnumber",                      limit: 255
-    t.string   "description",                     limit: 255
-    t.string   "connector_type",                  limit: 255
-    t.string   "drawing_norm",                    limit: 255
-    t.string   "h_x_w",                           limit: 255
-    t.string   "supplier",                        limit: 255
-    t.string   "where_used_product",              limit: 255
-    t.string   "release_status",                  limit: 255
-    t.string   "uploaded_by_section",             limit: 255
-    t.string   "uploader_role",                   limit: 255
-    t.string   "uploader_name",                   limit: 255
+    t.string   "partnumber"
+    t.string   "description"
+    t.string   "connector_type"
+    t.string   "drawing_norm"
+    t.string   "h_x_w"
+    t.string   "supplier"
+    t.string   "where_used_product"
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_partnumber"
     t.boolean  "need_to_edit_description"
     t.boolean  "need_to_edit_connector_type"
@@ -400,8 +400,8 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.boolean  "need_to_edit_where_used_product"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "reason",                          limit: 255
-    t.string   "where_used_plant",                limit: 255
+    t.string   "reason"
+    t.string   "where_used_plant"
     t.boolean  "need_to_edit_where_used_plant"
     t.boolean  "need_to_edit_reason"
   end
@@ -412,18 +412,18 @@ ActiveRecord::Schema.define(version: 20150527011815) do
   end
 
   create_table "copperwires", force: :cascade do |t|
-    t.string   "partnumber",                      limit: 255
-    t.string   "description",                     limit: 255
-    t.string   "copperwire_type",                 limit: 255
-    t.string   "self_bonded",                     limit: 255
+    t.string   "partnumber"
+    t.string   "description"
+    t.string   "copperwire_type"
+    t.string   "self_bonded"
     t.float    "diameter"
-    t.string   "drawing_norm",                    limit: 255
-    t.string   "supplier",                        limit: 255
-    t.string   "where_used_product",              limit: 255
-    t.string   "release_status",                  limit: 255
-    t.string   "uploaded_by_section",             limit: 255
-    t.string   "uploader_role",                   limit: 255
-    t.string   "uploader_name",                   limit: 255
+    t.string   "drawing_norm"
+    t.string   "supplier"
+    t.string   "where_used_product"
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_partnumber"
     t.boolean  "need_to_edit_description"
     t.boolean  "need_to_edit_copperwire_type"
@@ -434,9 +434,9 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.boolean  "need_to_edit_where_used_product"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "reason",                          limit: 255
+    t.string   "reason"
     t.boolean  "need_to_edit_where_used_plant"
-    t.string   "where_used_plant",                limit: 255
+    t.string   "where_used_plant"
     t.boolean  "need_to_edit_reason"
   end
 
@@ -446,19 +446,19 @@ ActiveRecord::Schema.define(version: 20150527011815) do
   end
 
   create_table "cord_clips", force: :cascade do |t|
-    t.string   "partnumber",                      limit: 255
-    t.string   "description",                     limit: 255
-    t.string   "cord_clip_type",                  limit: 255
-    t.string   "material",                        limit: 255
+    t.string   "partnumber"
+    t.string   "description"
+    t.string   "cord_clip_type"
+    t.string   "material"
     t.float    "max_cord_od"
-    t.string   "drawing_norm",                    limit: 255
-    t.string   "where_used_product",              limit: 255
-    t.string   "where_used_plant",                limit: 255
-    t.string   "remark",                          limit: 255
-    t.string   "release_status",                  limit: 255
-    t.string   "uploaded_by_section",             limit: 255
-    t.string   "uploader_role",                   limit: 255
-    t.string   "uploader_name",                   limit: 255
+    t.string   "drawing_norm"
+    t.string   "where_used_product"
+    t.string   "where_used_plant"
+    t.string   "remark"
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_partnumber"
     t.boolean  "need_to_edit_description"
     t.boolean  "need_to_edit_cord_clip_type"
@@ -470,7 +470,7 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.boolean  "need_to_edit_remark"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "reason",                          limit: 255
+    t.string   "reason"
     t.boolean  "need_to_edit_reason"
   end
 
@@ -480,26 +480,26 @@ ActiveRecord::Schema.define(version: 20150527011815) do
   end
 
   create_table "cords", force: :cascade do |t|
-    t.string   "partnumber",                      limit: 255
-    t.string   "description",                     limit: 255
-    t.string   "cord_mat",                        limit: 255
-    t.string   "cord_type",                       limit: 255
-    t.string   "plug_type",                       limit: 255
-    t.string   "polarity",                        limit: 255
-    t.string   "cross_sec",                       limit: 255
-    t.string   "cord_od",                         limit: 255
-    t.string   "length",                          limit: 255
-    t.string   "dismantled_length",               limit: 255
-    t.string   "switch_con",                      limit: 255
-    t.string   "drawing_norm",                    limit: 255
-    t.string   "where_used_product",              limit: 255
-    t.string   "where_used_plant",                limit: 255
-    t.string   "cord_spec",                       limit: 255
-    t.string   "remark",                          limit: 255
-    t.string   "release_status",                  limit: 255
-    t.string   "uploaded_by_section",             limit: 255
-    t.string   "uploader_role",                   limit: 255
-    t.string   "uploader_name",                   limit: 255
+    t.string   "partnumber"
+    t.string   "description"
+    t.string   "cord_mat"
+    t.string   "cord_type"
+    t.string   "plug_type"
+    t.string   "polarity"
+    t.string   "cross_sec"
+    t.string   "cord_od"
+    t.string   "length"
+    t.string   "dismantled_length"
+    t.string   "switch_con"
+    t.string   "drawing_norm"
+    t.string   "where_used_product"
+    t.string   "where_used_plant"
+    t.string   "cord_spec"
+    t.string   "remark"
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_partnumber"
     t.boolean  "need_to_edit_description"
     t.boolean  "need_to_edit_cord_mat"
@@ -518,24 +518,24 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.boolean  "need_to_edit_remark"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "reason",                          limit: 255
+    t.string   "reason"
     t.boolean  "need_to_edit_reason"
   end
 
   create_table "greases", force: :cascade do |t|
-    t.string   "partnumber",                       limit: 255
-    t.string   "description",                      limit: 255
-    t.string   "grease_type",                      limit: 255
-    t.string   "lubricated_location",              limit: 255
-    t.string   "drawing_norm",                     limit: 255
-    t.string   "supplier",                         limit: 255
-    t.string   "where_used_product",               limit: 255
+    t.string   "partnumber"
+    t.string   "description"
+    t.string   "grease_type"
+    t.string   "lubricated_location"
+    t.string   "drawing_norm"
+    t.string   "supplier"
+    t.string   "where_used_product"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "release_status",                   limit: 255
-    t.string   "uploaded_by_section",              limit: 255
-    t.string   "uploader_role",                    limit: 255
-    t.string   "uploader_name",                    limit: 255
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_partnumber"
     t.boolean  "need_to_edit_description"
     t.boolean  "need_to_edit_grease_type"
@@ -543,9 +543,9 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.boolean  "need_to_edit_drawing_norm"
     t.boolean  "need_to_edit_supplier"
     t.boolean  "need_to_edit_where_used_product"
-    t.string   "reason",                           limit: 255
+    t.string   "reason"
     t.boolean  "need_to_edit_where_used_plant"
-    t.string   "where_used_plant",                 limit: 255
+    t.string   "where_used_plant"
     t.boolean  "need_to_edit_reason"
   end
 
@@ -555,21 +555,21 @@ ActiveRecord::Schema.define(version: 20150527011815) do
   end
 
   create_table "grommets", force: :cascade do |t|
-    t.string   "partnumber",                       limit: 255
-    t.string   "description",                      limit: 255
-    t.string   "inner_hole_diameter",              limit: 255
-    t.string   "grommet_type",                     limit: 255
-    t.string   "length",                           limit: 255
-    t.string   "for_cord_od",                      limit: 255
-    t.string   "material",                         limit: 255
-    t.string   "drawing_norm",                     limit: 255
-    t.string   "where_used_product",               limit: 255
-    t.string   "where_used_plant",                 limit: 255
-    t.string   "remark",                           limit: 255
-    t.string   "release_status",                   limit: 255
-    t.string   "uploaded_by_section",              limit: 255
-    t.string   "uploader_role",                    limit: 255
-    t.string   "uploader_name",                    limit: 255
+    t.string   "partnumber"
+    t.string   "description"
+    t.string   "inner_hole_diameter"
+    t.string   "grommet_type"
+    t.string   "length"
+    t.string   "for_cord_od"
+    t.string   "material"
+    t.string   "drawing_norm"
+    t.string   "where_used_product"
+    t.string   "where_used_plant"
+    t.string   "remark"
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_partnumber"
     t.boolean  "need_to_edit_description"
     t.boolean  "need_to_edit_inner_hole_diameter"
@@ -583,7 +583,7 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.boolean  "need_to_edit_remark"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "reason",                           limit: 255
+    t.string   "reason"
     t.boolean  "need_to_edit_reason"
   end
 
@@ -593,20 +593,20 @@ ActiveRecord::Schema.define(version: 20150527011815) do
   end
 
   create_table "nuts", force: :cascade do |t|
-    t.string   "partnumber",                      limit: 255
-    t.string   "description",                     limit: 255
-    t.string   "nut_type",                        limit: 255
-    t.string   "nut_size",                        limit: 255
+    t.string   "partnumber"
+    t.string   "description"
+    t.string   "nut_type"
+    t.string   "nut_size"
     t.decimal  "width"
-    t.string   "drawing_number",                  limit: 255
-    t.string   "coating",                         limit: 255
-    t.string   "where_used_product",              limit: 255
-    t.string   "where_used_plant",                limit: 255
-    t.string   "remark",                          limit: 255
-    t.string   "release_status",                  limit: 255
-    t.string   "uploaded_by_section",             limit: 255
-    t.string   "uploader_role",                   limit: 255
-    t.string   "uploader_name",                   limit: 255
+    t.string   "drawing_number"
+    t.string   "coating"
+    t.string   "where_used_product"
+    t.string   "where_used_plant"
+    t.string   "remark"
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_partnumber"
     t.boolean  "need_to_edit_description"
     t.boolean  "need_to_edit_nut_type"
@@ -619,7 +619,7 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.boolean  "need_to_edit_remark"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "reason",                          limit: 255
+    t.string   "reason"
     t.boolean  "need_to_edit_reason"
     t.string   "material"
     t.boolean  "need_to_edit_material"
@@ -631,20 +631,20 @@ ActiveRecord::Schema.define(version: 20150527011815) do
   end
 
   create_table "plastic_materials", force: :cascade do |t|
-    t.string   "partnumber",                          limit: 255
-    t.string   "resin",                               limit: 255
-    t.string   "color",                               limit: 255
-    t.string   "supplier",                            limit: 255
-    t.string   "recommendation",                      limit: 255
-    t.string   "ul_number",                           limit: 255
-    t.string   "drawing_norm",                        limit: 255
-    t.string   "where_used_product",                  limit: 255
-    t.string   "supplier_material_info",              limit: 255
-    t.string   "related_molders",                     limit: 255
-    t.string   "release_status",                      limit: 255
-    t.string   "uploaded_by_section",                 limit: 255
-    t.string   "uploader_role",                       limit: 255
-    t.string   "uploader_name",                       limit: 255
+    t.string   "partnumber"
+    t.string   "resin"
+    t.string   "color"
+    t.string   "supplier"
+    t.string   "recommendation"
+    t.string   "ul_number"
+    t.string   "drawing_norm"
+    t.string   "where_used_product"
+    t.string   "supplier_material_info"
+    t.string   "related_molders"
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_partnumber"
     t.boolean  "need_to_edit_resin"
     t.boolean  "need_to_edit_color"
@@ -657,9 +657,9 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.boolean  "need_to_edit_related_molders"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "reason",                              limit: 255
+    t.string   "reason"
     t.boolean  "need_to_edit_where_used_plant"
-    t.string   "where_used_plant",                    limit: 255
+    t.string   "where_used_plant"
     t.boolean  "need_to_edit_reason"
   end
 
@@ -669,23 +669,23 @@ ActiveRecord::Schema.define(version: 20150527011815) do
   end
 
   create_table "screws", force: :cascade do |t|
-    t.string   "partnumber",                       limit: 255
-    t.string   "description",                      limit: 255
-    t.string   "screw_drive",                      limit: 255
-    t.string   "screw_head",                       limit: 255
-    t.string   "thread_type",                      limit: 255
-    t.string   "screw_size",                       limit: 255
+    t.string   "partnumber"
+    t.string   "description"
+    t.string   "screw_drive"
+    t.string   "screw_head"
+    t.string   "thread_type"
+    t.string   "screw_size"
     t.float    "length"
-    t.string   "connection_material",              limit: 255
-    t.string   "coating",                          limit: 255
-    t.string   "drawing_norm",                     limit: 255
-    t.string   "where_used_product",               limit: 255
-    t.string   "where_used_plant",                 limit: 255
-    t.string   "remark",                           limit: 255
-    t.string   "release_status",                   limit: 255
-    t.string   "uploaded_by_section",              limit: 255
-    t.string   "uploader_role",                    limit: 255
-    t.string   "uploader_name",                    limit: 255
+    t.string   "connection_material"
+    t.string   "coating"
+    t.string   "drawing_norm"
+    t.string   "where_used_product"
+    t.string   "where_used_plant"
+    t.string   "remark"
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_partnumber"
     t.boolean  "need_to_edit_description"
     t.boolean  "need_to_edit_screw_drive"
@@ -701,7 +701,7 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.boolean  "need_to_edit_remark"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "reason",                           limit: 255
+    t.string   "reason"
     t.boolean  "need_to_edit_reason"
   end
 
@@ -711,8 +711,8 @@ ActiveRecord::Schema.define(version: 20150527011815) do
   end
 
   create_table "spiral_springs", force: :cascade do |t|
-    t.string   "partnumber",                                limit: 255
-    t.string   "description",                               limit: 255
+    t.string   "partnumber"
+    t.string   "description"
     t.float    "material_thickness"
     t.float    "material_width"
     t.float    "outer_dia"
@@ -720,14 +720,14 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.float    "torsion_arm_movable_distance"
     t.float    "initial_force"
     t.float    "final_force"
-    t.string   "supplier",                                  limit: 255
-    t.string   "drawing_norm",                              limit: 255
-    t.string   "where_used_product",                        limit: 255
-    t.string   "where_used_plant",                          limit: 255
-    t.string   "release_status",                            limit: 255
-    t.string   "uploaded_by_section",                       limit: 255
-    t.string   "uploader_role",                             limit: 255
-    t.string   "uploader_name",                             limit: 255
+    t.string   "supplier"
+    t.string   "drawing_norm"
+    t.string   "where_used_product"
+    t.string   "where_used_plant"
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_partnumber"
     t.boolean  "need_to_edit_description"
     t.boolean  "need_to_edit_material_thickness"
@@ -743,7 +743,7 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.boolean  "need_to_edit_where_used_plant"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "reason",                                    limit: 255
+    t.string   "reason"
     t.boolean  "need_to_edit_reason"
   end
 
@@ -753,9 +753,9 @@ ActiveRecord::Schema.define(version: 20150527011815) do
   end
 
   create_table "springs", force: :cascade do |t|
-    t.string   "partnumber",                      limit: 255
-    t.string   "description",                     limit: 255
-    t.string   "spring_type",                     limit: 255
+    t.string   "partnumber"
+    t.string   "description"
+    t.string   "spring_type"
     t.float    "material_dia"
     t.float    "mean_dia"
     t.float    "free_length"
@@ -771,16 +771,16 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.float    "hook_length"
     t.float    "hook_arc_radius"
     t.float    "spring_constant"
-    t.string   "unit",                            limit: 255
-    t.string   "supplier",                        limit: 255
-    t.string   "drawing_norm",                    limit: 255
-    t.string   "where_used_product",              limit: 255
-    t.string   "where_used_plant",                limit: 255
-    t.string   "remark",                          limit: 255
-    t.string   "release_status",                  limit: 255
-    t.string   "uploaded_by_section",             limit: 255
-    t.string   "uploader_role",                   limit: 255
-    t.string   "uploader_name",                   limit: 255
+    t.string   "unit"
+    t.string   "supplier"
+    t.string   "drawing_norm"
+    t.string   "where_used_product"
+    t.string   "where_used_plant"
+    t.string   "remark"
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_partnumber"
     t.boolean  "need_to_edit_description"
     t.boolean  "need_to_edit_spring_type"
@@ -807,23 +807,23 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.boolean  "need_to_edit_remark"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "reason",                          limit: 255
+    t.string   "reason"
     t.boolean  "need_to_edit_reason"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",            limit: 255
-    t.string   "hashed_password", limit: 255
-    t.string   "salt",            limit: 255
+    t.string   "name"
+    t.string   "hashed_password"
+    t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "fullname",        limit: 255
-    t.string   "department",      limit: 255
-    t.string   "email",           limit: 255
-    t.string   "phone",           limit: 255
-    t.string   "location",        limit: 255
-    t.string   "role",            limit: 255
-    t.string   "section",         limit: 255
+    t.string   "fullname"
+    t.string   "department"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "location"
+    t.string   "role"
+    t.string   "section"
   end
 
   create_table "washer_imports", force: :cascade do |t|
@@ -832,22 +832,22 @@ ActiveRecord::Schema.define(version: 20150527011815) do
   end
 
   create_table "washers", force: :cascade do |t|
-    t.string   "partnumber",                      limit: 255
-    t.string   "description",                     limit: 255
-    t.string   "washer_type",                     limit: 255
+    t.string   "partnumber"
+    t.string   "description"
+    t.string   "washer_type"
     t.float    "inner_diameter"
     t.float    "outer_diameter"
     t.float    "thickness"
-    t.string   "coating",                         limit: 255
-    t.string   "material",                        limit: 255
-    t.string   "drawing_number",                  limit: 255
-    t.string   "where_used_product",              limit: 255
-    t.string   "where_used_plant",                limit: 255
-    t.string   "remark",                          limit: 255
-    t.string   "release_status",                  limit: 255
-    t.string   "uploaded_by_section",             limit: 255
-    t.string   "uploader_role",                   limit: 255
-    t.string   "uploader_name",                   limit: 255
+    t.string   "coating"
+    t.string   "material"
+    t.string   "drawing_number"
+    t.string   "where_used_product"
+    t.string   "where_used_plant"
+    t.string   "remark"
+    t.string   "release_status"
+    t.string   "uploaded_by_section"
+    t.string   "uploader_role"
+    t.string   "uploader_name"
     t.boolean  "need_to_edit_partnumber"
     t.boolean  "need_to_edit_description"
     t.boolean  "need_to_edit_washer_type"
@@ -862,7 +862,7 @@ ActiveRecord::Schema.define(version: 20150527011815) do
     t.boolean  "need_to_edit_remark"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "reason",                          limit: 255
+    t.string   "reason"
     t.boolean  "need_to_edit_reason"
     t.string   "hardness"
     t.string   "original_plant"

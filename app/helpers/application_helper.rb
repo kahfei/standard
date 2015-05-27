@@ -204,6 +204,20 @@ end
  	editable_fields(obj).select {|k,v| v == true }
  end 
 
+ # use in layout to style differently categories with data and without data
+	def part_categories
+		all_models = []
+		part_categories = []
+		folder = File.join(Rails.root, "app", "models")
+		Dir[File.join(folder,"*")].each do |filename|
+		  all_models << File.basename(filename).sub(/.rb$/, "").split("_").map { |name| name.capitalize }.join
+		  exception_list = ( all_models.select { |m| m.end_with? "Import"} << ["Concerns","User"] ).flatten
+		  part_categories = (all_models - exception_list).map {|cat| Kernel.const_get(cat)}
+		end
+		part_categories
+	end
+
+
 
 end
 

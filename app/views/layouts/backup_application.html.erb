@@ -34,21 +34,25 @@
 			<% if session[:user_role] != "Superadmin" %>
 			  <li><%= link_to "Pending parts", pending_index_path %></li>
 			<% end %>
-
-      <!-- if no record in category then disactivate -->
-      <% part_categories.each do |category| %>
-        <% if category.count > 0 %>
-          <li><%= link_to category, category %></li>
-        <% end %>
-      <% end %>
-      <% part_categories.each do |category| %>
-        <% if category.count == 0 %>
-          <li class="disabled"><%= link_to category, category %></li>
-        <% end %>
-      <% end %>
-
-
-
+			<li><%= link_to "AC Motors", ac_motors_path %></li>
+			<li><%= link_to "Anchor Logos", anchor_logos_path %></li>
+			<li><%= link_to "Bearings", bearings_path %></li>
+			<li><%= link_to "Plastic materials", plastic_materials_path %></li>
+			<li><%= link_to "Screws", screws_path %></li>
+			<li class="disabled"><%= link_to "Brush holders", brush_holders_path%></li>
+			<li class="disabled"><%= link_to "C Clips", c_clips_path%></li>
+			<li class="disabled"><%= link_to "Capacitors", capacitors_path%></li>
+			<li class="disabled"><%= link_to "Carbon brushes", carbon_brushes_path%></li>
+			<li class="disabled"><%= link_to "Connectors", connectors_path%></li>
+			<li class="disabled"><%= link_to "Copperwires", copperwires_path%></li>
+			<li class="disabled"><%= link_to "Cord clips", cord_clips_path%></li>
+			<li class="disabled"><%= link_to "Cords", cords_path%></li>
+			<li class="disabled"><%= link_to "Greases", greases_path%></li>
+			<li class="disabled"><%= link_to "Grommets", grommets_path%></li>
+			<li class="disabled"><%= link_to "Nuts", nuts_path%></li>
+			<li class="disabled"><%= link_to "Spiral springs", spiral_springs_path%></li>
+			<li class="disabled"><%= link_to "Springs", springs_path%></li>
+			<li class="disabled"><%= link_to "Washers", washers_path%></li>
 		    <% if session[:user_role] != "Normal" %>
 			  <li><%= link_to "Users", users_path %></li>
 		    <% end %>
@@ -66,7 +70,7 @@
     </div>
     <div id="container">
 	  <%= yield %>
-    
+    <%= part_categories %>
 	</div>
 
   

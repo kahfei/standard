@@ -1,8 +1,0 @@
-class FixUsedinName < ActiveRecord::Migration
-  def self.up
-    rename_column :parts, :used_in, :project
-  end
-
-  def self.down
-    rename_column :parts, :project, :used_in
-end
