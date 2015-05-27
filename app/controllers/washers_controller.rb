@@ -14,9 +14,11 @@ class WashersController < ApplicationController
       with_inner_diameter: Washer.inner_diameters_for_select,
       with_outer_diameter: Washer.outer_diameters_for_select,
       with_thickness: Washer.thicknesss_for_select,
+      with_hardness: Washer.hardnesss_for_select,
       with_coating: Washer.coatings_for_select,
       with_material: Washer.materials_for_select,
-      with_drawing_norm: Washer.drawing_norms_for_select,
+      with_drawing_number: Washer.drawing_numbers_for_select,
+      with_original_plant: Washer.original_plants_for_select, 
       with_where_used_product: Washer.where_used_products_for_select,
       with_where_used_plant: Washer.where_used_plants_for_select,
       with_remark: Washer.remarks_for_select,
@@ -152,12 +154,12 @@ class WashersController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def washer_params
       params.require(:washer).permit(:id, :partnumber, :description, :washer_type, :inner_diameter, 
-        :outer_diameter, :thickness, :coating, :material, :drawing_norm, :where_used_product, 
+        :outer_diameter, :thickness, :hardness, :coating, :material, :drawing_number, :original_plant, :where_used_product, 
         :where_used_plant, :remark, :release_status, 
         :need_to_edit_partnumber, :need_to_edit_description, :need_to_edit_washer_type, 
-        :need_to_edit_inner_diameter, :need_to_edit_outer_diameter, :need_to_edit_thickness, 
-        :need_to_edit_coating, :need_to_edit_material, :need_to_edit_drawing_norm, 
-        :need_to_edit_where_used_product, :need_to_edit_where_used_plant, :need_to_edit_remark,
-        :need_to_edit_reason, :reason)
+        :need_to_edit_inner_diameter, :need_to_edit_outer_diameter, :need_to_edit_thickness, :need_to_edit_hardness, 
+        :need_to_edit_coating, :need_to_edit_material, :need_to_edit_drawing_number, 
+        :need_to_edit_original_plant, :need_to_edit_where_used_product, :need_to_edit_where_used_plant, 
+        :need_to_edit_remark, :need_to_edit_reason, :reason)
     end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150527005539) do
+ActiveRecord::Schema.define(version: 20150527011815) do
 
   create_table "ac_motors", force: :cascade do |t|
     t.string   "motor_size"
@@ -612,7 +612,7 @@ ActiveRecord::Schema.define(version: 20150527005539) do
     t.boolean  "need_to_edit_nut_type"
     t.boolean  "need_to_edit_nut_size"
     t.boolean  "need_to_edit_width"
-    t.boolean  "need_to_edit_drawing_norm"
+    t.boolean  "need_to_edit_drawing_number"
     t.boolean  "need_to_edit_coating"
     t.boolean  "need_to_edit_where_used_product"
     t.boolean  "need_to_edit_where_used_plant"
@@ -622,6 +622,7 @@ ActiveRecord::Schema.define(version: 20150527005539) do
     t.string   "reason",                          limit: 255
     t.boolean  "need_to_edit_reason"
     t.string   "material"
+    t.boolean  "need_to_edit_material"
   end
 
   create_table "plastic_material_imports", force: :cascade do |t|
@@ -839,7 +840,7 @@ ActiveRecord::Schema.define(version: 20150527005539) do
     t.float    "thickness"
     t.string   "coating",                         limit: 255
     t.string   "material",                        limit: 255
-    t.string   "drawing_norm",                    limit: 255
+    t.string   "drawing_number",                  limit: 255
     t.string   "where_used_product",              limit: 255
     t.string   "where_used_plant",                limit: 255
     t.string   "remark",                          limit: 255
@@ -855,7 +856,7 @@ ActiveRecord::Schema.define(version: 20150527005539) do
     t.boolean  "need_to_edit_thickness"
     t.boolean  "need_to_edit_coating"
     t.boolean  "need_to_edit_material"
-    t.boolean  "need_to_edit_drawing_norm"
+    t.boolean  "need_to_edit_drawing_number"
     t.boolean  "need_to_edit_where_used_product"
     t.boolean  "need_to_edit_where_used_plant"
     t.boolean  "need_to_edit_remark"
@@ -863,6 +864,10 @@ ActiveRecord::Schema.define(version: 20150527005539) do
     t.datetime "updated_at"
     t.string   "reason",                          limit: 255
     t.boolean  "need_to_edit_reason"
+    t.string   "hardness"
+    t.string   "original_plant"
+    t.boolean  "need_to_edit_hardness"
+    t.boolean  "need_to_edit_original_plant"
   end
 
 end

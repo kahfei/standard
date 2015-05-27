@@ -36,6 +36,10 @@
     <%= f.text_field :thickness %>
   </div>
   <div class="field">
+    <%= f.label :hardness %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :hardness %>
+  </div>
+  <div class="field">
     <%= f.label :coating %><br>
     <%= f.text_field :coating %>
   </div>
@@ -44,8 +48,12 @@
     <%= f.text_field :material %>
   </div>
   <div class="field">
-    <%= f.label :drawing_norm %><br>
-    <%= f.text_field :drawing_norm %>
+    <%= f.label :drawing_number %><br>
+    <%= f.text_field :drawing_number %>
+  </div>
+  <div class="field">
+    <%= f.label :original_plant %><br>
+    <%= f.text_field :original_plant %>
   </div>
   <div class="field">
     <%= f.label :where_used_product %><br>
