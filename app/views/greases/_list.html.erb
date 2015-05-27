@@ -1,0 +1,42 @@
+<div id="filterrific_results" %>
+<div><%= page_entries_info greases %></div>
+
+<table class="table table-hover">
+  <tr class="active">
+    <th class="text-center">Partnumber</th>
+    <th class="text-center">Status</th>
+    <th class="text-center">Description</th>
+    <th class="text-center">Grease type</th>
+    <th class="text-center">Lubricated location</th>
+    <th class="text-center">Drawing norm</th>
+    <th class="text-center">Supplier</th>
+    <th class="text-center">Where used product</th>
+    <th class="text-center">Where used plant</th>
+    <th class="text-center">Reason</th>
+  </tr>
+
+<% greases.each do |grease| %>
+  <% if grease.release_status == "needs editing" && grease.uploader_name == session[:user_name] %>
+    <tr class="danger">
+  <% elsif grease.release_status == "pending" && session[:user_role] == "Sectionhead" && grease.uploader_role == "Normal" && grease.uploaded_by_section == session[:user_section] || session[:user_role] == "Departmenthead" && grease.uploader_role == "Sectionhead" && grease.release_status == "pending" %>
+    <tr class="warning">
+  <% elsif grease.release_status == "pending" || grease.release_status == "needs editing" %>
+    <tr class="pending_parts">
+  <% else %>
+    <tr>
+  <% end %>
+      <td><%= link_to "#{grease.partnumber}", grease, method: :get %></td>
+      <td><%= grease.release_status %></td>
+      <td><%= grease.description %></td>
+      <td><%= grease.grease_type %></td>
+      <td><%= grease.lubricated_location %></td>
+      <td><%= grease.drawing_norm %></td>
+      <td><%= grease.supplier %></td>
+      <td><%= grease.where_used_product %></td>
+      <td><%= grease.where_used_plant %></td>
+      <td><%= grease.reason %></td>
+    </tr>
+<% end %>
+</table>
+<%= will_paginate greases %>
+</div>

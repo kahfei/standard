@@ -1,0 +1,36 @@
+<h1>Listing Carbon brushes</h1>
+
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+<div class="row">
+  <%= form_for_filterrific @filterrific do |f| %>
+     <span class="glyphicon glyphicon-search"></span> <%= f.text_field(:search_query, class: 'filterrific-periodically-observed') %>
+     <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    <span class="glyphicon glyphicon-filter"></span>
+  </button>
+  <% end %>
+</div>
+
+<div class="row">
+<div class="collapse" id="collapseExample">
+  <%= render(
+              partial: 'shared/filter',
+              locals: { obj: CarbonBrush }) 
+  %>
+</div>
+
+<%= render(
+    partial: 'carbon_brushes/list', 
+    locals: { carbon_brushes: @carbon_brushes }) 
+%>
+
+<br />
+<% if is_section_head? || is_normal? %>
+  <%= button_to 'New Carbon brush', new_carbon_brush_path, :method => :get, class: "btn btn-default" %>
+<% elsif is_superadmin? %>
+  <%= link_to "Mass Import", new_carbon_brush_import_path, class: "btn btn-default" %>
+<% end %>

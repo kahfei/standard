@@ -1,0 +1,151 @@
+<div id="filterrific_results" %>
+
+
+<table class="table table-hover">
+  <tr class="active">
+    <th class='text-center'>Armature Partnumber</th>
+    <th class='text-center'>Status</th>
+    <th class='text-center'>Motor Size</th>
+    <th class='text-center'>Armature Drawing</th>
+    <th class='text-center'>Field Partnumber</th>
+    <th class='text-center'>Field Drawing</th>
+    <th class='text-center'>Voltage</th>
+    <th class='text-center'>Power</th>
+    <th class='text-center'>Amps Rating</th>
+    <th class='text-center'>Output RPM</th>
+    <th class='text-center'>Rotation</th>
+    <th class='text-center'>No Load RPM Motor</th>
+    <th class='text-center'>Gear Ratio</th>
+    <th class='text-center'>Armature Wire Diameter</th>
+    <th class='text-center'>Field Wire Diameter</th>
+    <th class='text-center'>Winding Type</th>
+    <th class='text-center'>Armature Resistance</th>
+    <th class='text-center'>Displace Angle</th>
+    <th class='text-center'>Armature no of turns</th>
+    <th class='text-center'>Field no of turns</th>
+    <th class='text-center'>Field resistance</th>
+    <th class='text-center'>Field Wind Drawing</th>
+    <th class='text-center'>Armature Package</th>
+    <th class='text-center'>Shaft Partnumber</th>
+    <th class='text-center'>Shaft Drawing</th>
+    <th class='text-center'>Armature Stack</th>
+    <th class='text-center'>Armature Laminate</th>
+    <th class='text-center'>Field Stack</th>
+    <th class='text-center'>Field Stack Opt</th>
+    <th class='text-center'>Armature End Laminate</th>
+    <th class='text-center'>Molding Component</th>
+    <th class='text-center'>Commutator</th>
+    <th class='text-center'>Armature Copper Wire</th>
+    <th class='text-center'>Armature Wire Drawing</th>
+    <th class='text-center'>Field Copper Wire</th>
+    <th class='text-center'>Armature Fan</th>
+    <th class='text-center'>Insulating Tube</th>
+    <th class='text-center'>Insulator</th>
+    <th class='text-center'>Hard Paper Tube</th>
+    <th class='text-center'>Slot Insulation</th>
+    <th class='text-center'>Slot Wedge</th>
+    <th class='text-center'>Pressboard</th>
+    <th class='text-center'>Field Insulation Paper</th>
+    <th class='text-center'>Connection Plate</th>
+    <th class='text-center'>Connection Plate Opt</th>
+    <th class='text-center'>End Plate</th>
+    <th class='text-center'>End Plate Opt</th>
+    <th class='text-center'>Polyester Resin</th>
+    <th class='text-center'>Resin Hardener</th>
+    <th class='text-center'>Hardener Adhesive</th>
+    <th class='text-center'>Impregnating Resin</th>
+    <th class='text-center'>Impregnating Hardener</th>
+    <th class='text-center'>Receptacle 01</th>
+    <th class='text-center'>Receptacle 02</th>
+    <th class='text-center'>Field Impregnating Resin</th>
+    <th class='text-center'>Field Resin Hardener</th>
+    <th class='text-center'>Filed Coating</th>
+    <th class='text-center'>Field Heat Sink</th>
+    <th class='text-center'>Field Pressboard</th>
+    <th class='text-center'>where Used Product</th>
+    <th class='text-center'>Where Used Plant </th>
+    <th class='text-center'>Remark</th>
+    <th class='text-center'>Reason</th>
+   
+  </tr>
+
+<% ac_motors.each do |ac_motor| %>
+  <% if ac_motor.release_status == "needs editing" && ac_motor.uploader_name == session[:user_name] %>
+    <tr class="danger">
+  <% elsif ac_motor.release_status == "pending" && session[:user_role] == "Sectionhead" && ac_motor.uploader_role == "Normal" && ac_motor.uploaded_by_section == session[:user_section] || session[:user_role] == "Departmenthead" && ac_motor.uploader_role == "Sectionhead" && ac_motor.release_status == "pending" %>
+    <tr class="warning">
+  <% elsif ac_motor.release_status == "pending" || ac_motor.release_status == "needs editing" %>
+    <tr class="pending_parts">
+  <% else %>
+    <tr>
+  <% end %>
+        <td><%= link_to "#{ac_motor.arm_part_no}", ac_motor, method: :get %></td>
+        <td><%= ac_motor.release_status %></td>
+        <td><%= ac_motor.motor_size %></td>
+        <td><%= ac_motor.armature_drw %></td>
+        <td><%= ac_motor.field_part_no %></td>
+        <td><%= ac_motor.field_drw %></td>
+        <td><%= ac_motor.voltage %></td>
+        <td><%= ac_motor.power %></td>
+        <td><%= ac_motor.amps_rating %></td>
+        <td><%= ac_motor.output_rpm %></td>
+        <td><%= ac_motor.rotation %></td>
+        <td><%= ac_motor.no_load_rpm_motor %></td>
+        <td><%= ac_motor.gear_ratio %></td>
+        <td><%= ac_motor.arm_wire_dia %></td>
+        <td><%= ac_motor.field_wire_dia %></td>
+        <td><%= ac_motor.winding_type %></td>
+        <td><%= ac_motor.arm_resistance %></td>
+        <td><%= ac_motor.displace_angle %></td>
+        <td><%= ac_motor.arm_no_of_turns %></td>
+        <td><%= ac_motor.field_no_of_turns %></td>
+        <td><%= ac_motor.field_resistance %></td>
+        <td><%= ac_motor.field_wind_drw %></td>
+        <td><%= ac_motor.arm_package %></td>
+        <td><%= ac_motor.shaft_part_no %></td>
+        <td><%= ac_motor.shaft_drw %></td>
+        <td><%= ac_motor.arm_stack %></td>
+        <td><%= ac_motor.arm_laminate %></td>
+        <td><%= ac_motor.field_stack %></td>
+        <td><%= ac_motor.field_stack_opt %></td>
+        <td><%= ac_motor.arm_end_lami %></td>
+        <td><%= ac_motor.molding_comp %></td>
+        <td><%= ac_motor.commutator %></td>
+        <td><%= ac_motor.arm_copper_wire %></td>
+        <td><%= ac_motor.arm_wire_drw %></td>
+        <td><%= ac_motor.field_copper_wire %></td>
+        <td><%= ac_motor.arm_fan %></td>
+        <td><%= ac_motor.insulating_tube %></td>
+        <td><%= ac_motor.insulator %></td>
+        <td><%= ac_motor.hard_paper_tube %></td>
+        <td><%= ac_motor.slot_insulation %></td>
+        <td><%= ac_motor.slot_wedge %></td>
+        <td><%= ac_motor.pressboard %></td>
+        <td><%= ac_motor.field_insulation_paper %></td>
+        <td><%= ac_motor.connection_plate %></td>
+        <td><%= ac_motor.conn_plate_opt %></td>
+        <td><%= ac_motor.end_plate %></td>
+        <td><%= ac_motor.end_plate_opt %></td>
+        <td><%= ac_motor.polyester_resin %></td>
+        <td><%= ac_motor.resin_hardener %></td>
+        <td><%= ac_motor.hardener_adhesive %></td>
+        <td><%= ac_motor.impregnating_resin %></td>
+        <td><%= ac_motor.impreg_hardener %></td>
+        <td><%= ac_motor.receptacle_01 %></td>
+        <td><%= ac_motor.receptacle_02 %></td>
+        <td><%= ac_motor.field_impregn_resin %></td>
+        <td><%= ac_motor.field_resin_hard %></td>
+        <td><%= ac_motor.filed_coating %></td>
+        <td><%= ac_motor.field_heat_sink %></td>
+        <td><%= ac_motor.field_pressboard %></td>
+        <td><%= ac_motor.where_used_product %></td>
+        <td><%= ac_motor.where_used_plant %></td>
+        <td><%= ac_motor.remark %></td>
+        <td><%= ac_motor.reason %></td>
+       
+
+    </tr>
+<% end %>
+</table>
+<%= will_paginate ac_motors %>
+</div>

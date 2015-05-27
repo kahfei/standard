@@ -1,0 +1,54 @@
+<div id="filterrific_results" %>
+<div><%= page_entries_info spiral_springs %></div>
+
+<table class="table table-hover">
+  <tr class="active">
+      <th class="text-center">Partnumber</th>
+      <th class="text-center">Status</th>
+      <th class="text-center">Description</th>
+      <th class="text-center">Material thickness</th>
+      <th class="text-center">Material width</th>
+      <th class="text-center">Outer dia</th>
+      <th class="text-center">Torsion arm length</th>
+      <th class="text-center">Torsion arm movable distance</th>
+      <th class="text-center">Initial force</th>
+      <th class="text-center">Final force</th>
+      <th class="text-center">Supplier</th>
+      <th class="text-center">Drawing norm</th>
+      <th class="text-center">Where used product</th>
+      <th class="text-center">Where used plant</th>
+      <th class="text-center">Reason</th>
+    </tr>
+
+  <tbody>
+    <% spiral_springs.each do |spiral_spring| %>
+      <% if spiral_spring.release_status == "needs editing" && spiral_spring.uploader_name == session[:user_name] %>
+        <tr class="danger">
+      <% elsif spiral_spring.release_status == "pending" && session[:user_role] == "Sectionhead" && spiral_spring.uploader_role == "Normal" && spiral_spring.uploaded_by_section == session[:user_section] || session[:user_role] == "Departmenthead" && spiral_spring.uploader_role == "Sectionhead" && spiral_spring.release_status == "pending" %>
+        <tr class="warning">
+      <% elsif spiral_spring.release_status == "pending" || spiral_spring.release_status == "needs editing" %>
+        <tr class="pending_parts">
+      <% else %>
+        <tr>
+      <% end %>
+        <td><%= link_to "#{spiral_spring.partnumber}", spiral_spring, method: :get %></td>
+        <td><%= spiral_spring.release_status %></td>
+        <td><%= spiral_spring.description %></td>
+        <td><%= spiral_spring.material_thickness %></td>
+        <td><%= spiral_spring.material_width %></td>
+        <td><%= spiral_spring.outer_dia %></td>
+        <td><%= spiral_spring.torsion_arm_length %></td>
+        <td><%= spiral_spring.torsion_arm_movable_distance %></td>
+        <td><%= spiral_spring.initial_force %></td>
+        <td><%= spiral_spring.final_force %></td>
+        <td><%= spiral_spring.supplier %></td>
+        <td><%= spiral_spring.drawing_norm %></td>
+        <td><%= spiral_spring.where_used_product %></td>
+        <td><%= spiral_spring.where_used_plant %></td>
+        <td><%= spiral_spring.reason %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate spiral_springs %>
+</div>

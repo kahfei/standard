@@ -1,0 +1,91 @@
+<br />
+<h2>This part is waiting to get released!</h2>
+<br />
+
+<p>
+  <strong>Partnumber:</strong>
+  <%= @grommet.partnumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @grommet.description %>
+</p>
+
+<p>
+  <strong>Inner hole diameter:</strong>
+  <%= @grommet.inner_hole_diameter %>
+</p>
+
+<p>
+  <strong>Grommet type:</strong>
+  <%= @grommet.grommet_type %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @grommet.length %>
+</p>
+
+<p>
+  <strong>For cord od:</strong>
+  <%= @grommet.for_cord_od %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @grommet.material %>
+</p>
+
+<p>
+  <strong>Drawing norm:</strong>
+  <%= @grommet.drawing_norm %>
+</p>
+
+<p>
+  <strong>Where used product:</strong>
+  <%= @grommet.where_used_product %>
+</p>
+
+<p>
+  <strong>Where used plant:</strong>
+  <%= @grommet.where_used_plant %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @grommet.remark %>
+</p><br />
+
+<p>
+  <b>Reason for submission:</b>
+    <%= @grommet.reason %>
+  </p><br />
+
+  <% if session[:user_role] == "Sectionhead" && @grommet.uploader_role == "Normal" && @grommet.release_status == "approved draft" && @grommet.uploaded_by_section == session[:user_section] %> 
+
+    <%= form_for(@grommet) do |f| %>
+        <% if @grommet.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@grommet.errors.count, "error") %> prohibited this grommet from being saved:</h2>
+
+            <ul>
+            <% @grommet.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+          <div class="field">
+              <%= f.label :Status? %><br />
+              <%= f.text_field :release_status, :value => "released", :readonly => true %>
+          </div>
+          
+          <br />
+
+          <div class="actions">
+            <%= f.submit 'Release Grommet', :name => 'create' %>
+          </div>
+      <% end %>
+    <% end %>

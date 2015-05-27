@@ -1,0 +1,88 @@
+<br />
+<h2>This part is waiting to get released!</h2>
+<br />
+
+<p>
+  <strong>Partnumber:</strong>
+  <%= @nut.partnumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @nut.description %>
+</p>
+
+<p>
+  <strong>Nut type:</strong>
+  <%= @nut.nut_type %>
+</p>
+
+<p>
+  <strong>Nut size:</strong>
+  <%= @nut.nut_size %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @nut.width %>
+</p>
+
+<p>
+  <strong>Drawing norm:</strong>
+  <%= @nut.drawing_norm %>
+</p>
+
+<p>
+  <strong>Coating:</strong>
+  <%= @nut.coating %>
+</p>
+
+<p>
+  <strong>Where used product:</strong>
+  <%= @nut.where_used_product %>
+</p>
+
+<p>
+  <strong>Where used plant:</strong>
+  <%= @nut.where_used_plant %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @nut.remark %>
+</p>
+
+<br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @nut.reason %>
+  </p><br />
+
+  <% if session[:user_role] == "Sectionhead" && @nut.uploader_role == "Normal" && @nut.release_status == "approved draft" && @nut.uploaded_by_section == session[:user_section] %> 
+
+    <%= form_for(@nut) do |f| %>
+        <% if @nut.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@nut.errors.count, "error") %> prohibited this nut from being saved:</h2>
+
+            <ul>
+            <% @nut.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+          <div class="field">
+              <%= f.label :Status? %><br />
+              <%= f.text_field :release_status, :value => "released", :readonly => true %>
+          </div>
+          
+          <br />
+
+          <div class="actions">
+            <%= f.submit 'Release Nut', :name => 'create' %>
+          </div>
+      <% end %>
+    <% end %>

@@ -1,0 +1,97 @@
+<%= form_for(@ac_motor) do |f| %>
+  <% if @ac_motor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ac_motor.errors.count, "error") %> prohibited this ac_motor from being saved:</h2>
+
+      <ul>
+      <% @ac_motor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <div class='field'> <%= f.label :arm_part_no %><br /> <%= f.text_field :arm_part_no %> </div>
+  <div class='field'> <%= f.label :motor_size%><br /> <%= f.text_field :motor_size %> </div>
+  <div class='field'> <%= f.label :armature_drw%><br /> <%= f.text_field :armature_drw %> </div>
+  <div class='field'> <%= f.label :field_part_no%><br /> <%= f.text_field :field_part_no %> </div>
+  <div class='field'> <%= f.label :field_drw%><br /> <%= f.text_field :field_drw %> </div>
+  <div class='field'> <%= f.label :voltage%><br /> <%= f.text_field :voltage %> </div>
+  <div class='field'> <%= f.label :power%><br /> <%= f.text_field :power %> </div>
+  <div class='field'> <%= f.label :amps_rating%><br /> <%= f.text_field :amps_rating %> </div>
+  <div class='field'> <%= f.label :output_rpm%><br /> <%= f.text_field :output_rpm %> </div>
+  <div class='field'> <%= f.label :rotation%><br /> <%= f.text_field :rotation %> </div>
+  <div class='field'> <%= f.label :no_load_rpm_motor%><br /> <%= f.text_field :no_load_rpm_motor %> </div>
+  <div class='field'> <%= f.label :gear_ratio%><br /> <%= f.text_field :gear_ratio %> </div>
+  <div class='field'> <%= f.label :arm_wire_dia%><br /> <%= f.text_field :arm_wire_dia %> </div>
+  <div class='field'> <%= f.label :field_wire_dia%><br /> <%= f.text_field :field_wire_dia %> </div>
+  <div class='field'> <%= f.label :winding_type%><br /> <%= f.text_field :winding_type %> </div>
+  <div class='field'> <%= f.label :arm_resistance%><br /> <%= f.text_field :arm_resistance %> </div>
+  <div class='field'> <%= f.label :displace_angle%><br /> <%= f.text_field :displace_angle %> </div>
+  <div class='field'> <%= f.label :arm_no_of_turns%><br /> <%= f.text_field :arm_no_of_turns %> </div>
+  <div class='field'> <%= f.label :field_no_of_turns%><br /> <%= f.text_field :field_no_of_turns %> </div>
+  <div class='field'> <%= f.label :field_resistance%><br /> <%= f.text_field :field_resistance %> </div>
+  <div class='field'> <%= f.label :field_wind_drw%><br /> <%= f.text_field :field_wind_drw %> </div>
+  <div class='field'> <%= f.label :arm_package%><br /> <%= f.text_field :arm_package %> </div>
+  <div class='field'> <%= f.label :shaft_part_no%><br /> <%= f.text_field :shaft_part_no %> </div>
+  <div class='field'> <%= f.label :shaft_drw%><br /> <%= f.text_field :shaft_drw %> </div>
+  <div class='field'> <%= f.label :arm_stack%><br /> <%= f.text_field :arm_stack %> </div>
+  <div class='field'> <%= f.label :arm_laminate%><br /> <%= f.text_field :arm_laminate %> </div>
+  <div class='field'> <%= f.label :field_stack%><br /> <%= f.text_field :field_stack %> </div>
+  <div class='field'> <%= f.label :field_stack_opt%><br /> <%= f.text_field :field_stack_opt %> </div>
+  <div class='field'> <%= f.label :arm_end_lami%><br /> <%= f.text_field :arm_end_lami %> </div>
+  <div class='field'> <%= f.label :molding_comp%><br /> <%= f.text_field :molding_comp %> </div>
+  <div class='field'> <%= f.label :commutator%><br /> <%= f.text_field :commutator %> </div>
+  <div class='field'> <%= f.label :arm_copper_wire%><br /> <%= f.text_field :arm_copper_wire %> </div>
+  <div class='field'> <%= f.label :arm_wire_drw%><br /> <%= f.text_field :arm_wire_drw %> </div>
+  <div class='field'> <%= f.label :field_copper_wire%><br /> <%= f.text_field :field_copper_wire %> </div>
+  <div class='field'> <%= f.label :arm_fan%><br /> <%= f.text_field :arm_fan %> </div>
+  <div class='field'> <%= f.label :insulating_tube%><br /> <%= f.text_field :insulating_tube %> </div>
+  <div class='field'> <%= f.label :insulator%><br /> <%= f.text_field :insulator %> </div>
+  <div class='field'> <%= f.label :hard_paper_tube%><br /> <%= f.text_field :hard_paper_tube %> </div>
+  <div class='field'> <%= f.label :slot_insulation%><br /> <%= f.text_field :slot_insulation %> </div>
+  <div class='field'> <%= f.label :slot_wedge%><br /> <%= f.text_field :slot_wedge %> </div>
+  <div class='field'> <%= f.label :pressboard%><br /> <%= f.text_field :pressboard %> </div>
+  <div class='field'> <%= f.label :field_insulation_paper%><br /> <%= f.text_field :field_insulation_paper %> </div>
+  <div class='field'> <%= f.label :connection_plate%><br /> <%= f.text_field :connection_plate %> </div>
+  <div class='field'> <%= f.label :conn_plate_opt%><br /> <%= f.text_field :conn_plate_opt %> </div>
+  <div class='field'> <%= f.label :end_plate%><br /> <%= f.text_field :end_plate %> </div>
+  <div class='field'> <%= f.label :end_plate_opt%><br /> <%= f.text_field :end_plate_opt %> </div>
+  <div class='field'> <%= f.label :polyester_resin%><br /> <%= f.text_field :polyester_resin %> </div>
+  <div class='field'> <%= f.label :resin_hardener%><br /> <%= f.text_field :resin_hardener %> </div>
+  <div class='field'> <%= f.label :hardener_adhesive%><br /> <%= f.text_field :hardener_adhesive %> </div>
+  <div class='field'> <%= f.label :impregnating_resin%><br /> <%= f.text_field :impregnating_resin %> </div>
+  <div class='field'> <%= f.label :impreg_hardener%><br /> <%= f.text_field :impreg_hardener %> </div>
+  <div class='field'> <%= f.label :receptacle_01%><br /> <%= f.text_field :receptacle_01 %> </div>
+  <div class='field'> <%= f.label :receptacle_02%><br /> <%= f.text_field :receptacle_02 %> </div>
+  <div class='field'> <%= f.label :field_impregn_resin%><br /> <%= f.text_field :field_impregn_resin %> </div>
+  <div class='field'> <%= f.label :field_resin_hard%><br /> <%= f.text_field :field_resin_hard %> </div>
+  <div class='field'> <%= f.label :filed_coating%><br /> <%= f.text_field :filed_coating %> </div>
+  <div class='field'> <%= f.label :field_heat_sink%><br /> <%= f.text_field :field_heat_sink %> </div>
+  <div class='field'> <%= f.label :field_pressboard%><br /> <%= f.text_field :field_pressboard %> </div>
+  <div class='field'> <%= f.label :where_used_product%><br /> <%= f.text_field :where_used_product %> </div>
+  <div class='field'> <%= f.label :where_used_plant%><br /> <%= f.text_field :where_used_plant %> </div>
+  <div class='field'> <%= f.label :remark%><br /> <%= f.text_field :remark %> </div>
+  <div class='field'> <%= f.label :reason_for_submission%><br /> <%= f.text_field :reason %> </div>
+  <br />
+  
+
+  <% if session[:user_role] == "Normal" && @ac_motor.uploader_name == nil || session[:user_role] == "Sectionhead" && @ac_motor.uploader_name == nil %>
+      <div class="field">
+        <%= f.label :release_status %><br />
+        <%= f.text_field :release_status, :value => "pending", :readonly => true %>
+      </div>
+  <% end %>
+    
+  <% if @ac_motor.uploader_name != session[:user_name] && session[:user_role] != "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Submit Ac Motor', :name => 'submit' %>
+    </div>
+  <% end %>
+
+  <% if @ac_motor.uploader_name == session[:user_name] || session[:user_role] == "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Update Ac Motor', :name => 'create' %>
+    </div>
+  <% end %>
+<% end %>

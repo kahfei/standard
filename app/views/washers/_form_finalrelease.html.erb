@@ -1,0 +1,103 @@
+<br />
+<h2>This part is waiting to get released!</h2>
+<br />
+
+<p>
+  <strong>Partnumber:</strong>
+  <%= @washer.partnumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @washer.description %>
+</p>
+
+<p>
+  <strong>Washer type:</strong>
+  <%= @washer.washer_type %>
+</p>
+
+<p>
+  <strong>Inner diameter:</strong>
+  <%= @washer.inner_diameter %>
+</p>
+
+<p>
+  <strong>Outer diameter:</strong>
+  <%= @washer.outer_diameter %>
+</p>
+
+<p>
+  <strong>Thickness:</strong>
+  <%= @washer.thickness %>
+</p>
+
+<p>
+  <strong>Coating:</strong>
+  <%= @washer.coating %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @washer.material %>
+</p>
+
+<p>
+  <strong>Drawing norm:</strong>
+  <%= @washer.drawing_norm %>
+</p>
+
+<p>
+  <strong>Where used product:</strong>
+  <%= @washer.where_used_product %>
+</p>
+
+<p>
+  <strong>Where used plant:</strong>
+  <%= @washer.where_used_plant %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @washer.remark %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @washer.reason %>
+</p>
+
+<br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @washer.reason %>
+  </p><br />
+
+<% if session[:user_role] == "Sectionhead" && @washer.uploader_role == "Normal" && @washer.release_status == "approved draft" && @washer.uploaded_by_section == session[:user_section] %> 
+
+    <%= form_for(@washer) do |f| %>
+        <% if @washer.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@washer.errors.count, "error") %> prohibited this washer from being saved:</h2>
+
+            <ul>
+            <% @washer.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+          <div class="field">
+              <%= f.label :Status? %><br />
+              <%= f.text_field :release_status, :value => "released", :readonly => true %>
+          </div>
+          
+          <br />
+
+          <div class="actions">
+            <%= f.submit 'Release Washer', :name => 'create' %>
+          </div>
+      <% end %>
+    <% end %>

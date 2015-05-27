@@ -1,0 +1,96 @@
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+
+ <%= part_status(@spiral_spring) %>
+<p>
+  <strong>Partnumber:</strong>
+  <%= @spiral_spring.partnumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @spiral_spring.description %>
+</p>
+
+<p>
+  <strong>Material thickness:</strong>
+  <%= @spiral_spring.material_thickness %>
+</p>
+
+<p>
+  <strong>Material width:</strong>
+  <%= @spiral_spring.material_width %>
+</p>
+
+<p>
+  <strong>Outer dia:</strong>
+  <%= @spiral_spring.outer_dia %>
+</p>
+
+<p>
+  <strong>Torsion arm length:</strong>
+  <%= @spiral_spring.torsion_arm_length %>
+</p>
+
+<p>
+  <strong>Torsion arm movable distance:</strong>
+  <%= @spiral_spring.torsion_arm_movable_distance %>
+</p>
+
+<p>
+  <strong>Initial force:</strong>
+  <%= @spiral_spring.initial_force %>
+</p>
+
+<p>
+  <strong>Final force:</strong>
+  <%= @spiral_spring.final_force %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @spiral_spring.supplier %>
+</p>
+
+<p>
+  <strong>Drawing norm:</strong>
+  <%= @spiral_spring.drawing_norm %>
+</p>
+
+<p>
+  <strong>Where used product:</strong>
+  <%= @spiral_spring.where_used_product %>
+</p>
+
+<p>
+  <strong>Where used plant:</strong>
+  <%= @spiral_spring.where_used_plant %>
+</p>
+
+
+<br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @spiral_spring.reason %>
+  </p><br />
+
+  <p>
+    <b>Submitted by:</b>
+    <%= @spiral_spring.uploader_name %>
+  </p>
+
+  <p>
+    <b>Created at:</b>
+    <%= @spiral_spring.created_at %>
+  </p>
+
+  <p>
+    <b>Last updated at:</b>
+    <%= @spiral_spring.updated_at %>
+  </p>
+<%= render 'shared/show_actions', :object => @spiral_spring %>

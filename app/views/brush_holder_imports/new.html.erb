@@ -1,0 +1,36 @@
+<h1>Brush holder Import</h1>
+
+
+<p>Please use CSV or Excel file for importing purpose.</p>
+<p>Following column are allowed, first row in the csv or excel file should be the column name.</p>
+<p>You don't need to make a column with the id.</p><br />
+
+<ul>
+	<% BrushHolder.columns.each do |column| %>
+	 <% if column.name.in? ["id", *BrushHolder.accessible_attributes] %>
+	 <li>
+	 	<strong><%= column.name %></strong> -
+	 	<%= column.type.to_s.titleize %> type
+	 </li>
+	 <% end %>
+	<% end %>
+</ul><br />
+
+
+<%= form_for @brush_holder_import do |f| %>
+	<% if @brush_holder_import.errors.any? %>
+	<div id="error_explanation">
+		<h2><%= pluralize(@brush_holder_import.errors.count, "error") %> prohibited this import from completing:</h2>
+		<ul>
+			<% @brush_holder_import.errors.full_messages.each do |msg| %>
+			  <li><%= msg %></li>
+			<% end %>
+		</ul>
+	</div>
+	<% end %>
+
+	<div class="field">
+		<%= f.file_field :file %>
+		<div class="buttons"><%= f.submit "Import" %></div>
+	</div>
+<% end %>

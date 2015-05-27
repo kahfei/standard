@@ -1,0 +1,94 @@
+<br />
+<h2>This part is waiting to get released!</h2>
+<br />
+  <p><b>Armature Partnumber:</b><%= @ac_motor.arm_part_no %></p>
+  <p><b>Motor Size:</b><%= @ac_motor.motor_size %></p>
+  <p><b>Armature Drawing:</b><%= @ac_motor.armature_drw %></p>
+  <p><b>Field Partnumber:</b><%= @ac_motor.field_part_no %></p>
+  <p><b>Field Drawing:</b><%= @ac_motor.field_drw %></p>
+  <p><b>Voltage:</b><%= @ac_motor.voltage %></p>
+  <p><b>Power:</b><%= @ac_motor.power %></p>
+  <p><b>Amps Rating:</b><%= @ac_motor.amps_rating %></p>
+  <p><b>Output RPM:</b><%= @ac_motor.output_rpm %></p>
+  <p><b>Rotation:</b><%= @ac_motor.rotation %></p>
+  <p><b>No Load RPM Motor:</b><%= @ac_motor.no_load_rpm_motor %></p>
+  <p><b>Gear Ratio:</b><%= @ac_motor.gear_ratio %></p>
+  <p><b>Armature Wire Diameter:</b><%= @ac_motor.arm_wire_dia %></p>
+  <p><b>Field Wire Diameter:</b><%= @ac_motor.field_wire_dia %></p>
+  <p><b>Winding Type:</b><%= @ac_motor.winding_type %></p>
+  <p><b>Armature Resistance:</b><%= @ac_motor.arm_resistance %></p>
+  <p><b>Displace Angle:</b><%= @ac_motor.displace_angle %></p>
+  <p><b>Armature no of turns:</b><%= @ac_motor.arm_no_of_turns %></p>
+  <p><b>Field no of turns:</b><%= @ac_motor.field_no_of_turns %></p>
+  <p><b>Field resistance:</b><%= @ac_motor.field_resistance %></p>
+  <p><b>Field Wind Drawing:</b><%= @ac_motor.field_wind_drw %></p>
+  <p><b>Armature Package:</b><%= @ac_motor.arm_package %></p>
+  <p><b>Shaft Partnumber:</b><%= @ac_motor.shaft_part_no %></p>
+  <p><b>Shaft Drawing:</b><%= @ac_motor.shaft_drw %></p>
+  <p><b>Armature Stack:</b><%= @ac_motor.arm_stack %></p>
+  <p><b>Armature Laminate:</b><%= @ac_motor.arm_laminate %></p>
+  <p><b>Field Stack:</b><%= @ac_motor.field_stack %></p>
+  <p><b>Field Stack Opt:</b><%= @ac_motor.field_stack_opt %></p>
+  <p><b>Armature End Laminate:</b><%= @ac_motor.arm_end_lami %></p>
+  <p><b>Molding Component:</b><%= @ac_motor.molding_comp %></p>
+  <p><b>Commutator:</b><%= @ac_motor.commutator %></p>
+  <p><b>Armature Copper Wire:</b><%= @ac_motor.arm_copper_wire %></p>
+  <p><b>Armature Wire Drawing:</b><%= @ac_motor.arm_wire_drw %></p>
+  <p><b>Field Copper Wire:</b><%= @ac_motor.field_copper_wire %></p>
+  <p><b>Armature Fan:</b><%= @ac_motor.arm_fan %></p>
+  <p><b>Insulating Tube:</b><%= @ac_motor.insulating_tube %></p>
+  <p><b>Insulator:</b><%= @ac_motor.insulator %></p>
+  <p><b>Hard Paper Tube:</b><%= @ac_motor.hard_paper_tube %></p>
+  <p><b>Slot Insulation:</b><%= @ac_motor.slot_insulation %></p>
+  <p><b>Slot Wedge:</b><%= @ac_motor.slot_wedge %></p>
+  <p><b>Pressboard:</b><%= @ac_motor.pressboard %></p>
+  <p><b>Field Insulation Paper:</b><%= @ac_motor.field_insulation_paper %></p>
+  <p><b>Connection Plate:</b><%= @ac_motor.connection_plate %></p>
+  <p><b>Connection Plate Opt:</b><%= @ac_motor.conn_plate_opt %></p>
+  <p><b>End Plate:</b><%= @ac_motor.end_plate %></p>
+  <p><b>End Plate Opt:</b><%= @ac_motor.end_plate_opt %></p>
+  <p><b>Polyester Resin:</b><%= @ac_motor.polyester_resin %></p>
+  <p><b>Resin Hardener:</b><%= @ac_motor.resin_hardener %></p>
+  <p><b>Hardener Adhesive:</b><%= @ac_motor.hardener_adhesive %></p>
+  <p><b>Impregnating Resin:</b><%= @ac_motor.impregnating_resin %></p>
+  <p><b>Impregnating Hardener:</b><%= @ac_motor.impreg_hardener %></p>
+  <p><b>Receptacle 01:</b><%= @ac_motor.receptacle_01 %></p>
+  <p><b>Receptacle 02:</b><%= @ac_motor.receptacle_02 %></p>
+  <p><b>Field Impregnating Resin:</b><%= @ac_motor.field_impregn_resin %></p>
+  <p><b>Field Resin Hardener:</b><%= @ac_motor.field_resin_hard %></p>
+  <p><b>Filed Coating:</b><%= @ac_motor.filed_coating %></p>
+  <p><b>Field Heat Sink:</b><%= @ac_motor.field_heat_sink %></p>
+  <p><b>Field Pressboard:</b><%= @ac_motor.field_pressboard %></p>
+  <p><b>where Used Product:</b><%= @ac_motor.where_used_product %></p>
+  <p><b>Where Used Plant :</b><%= @ac_motor.where_used_plant %></p>
+  <p><b>Remark:</b><%= @ac_motor.remark %></p>
+  <p><b>Reason:</b><%= @ac_motor.reason %></p>
+
+
+<% if session[:user_role] == "Sectionhead" && @ac_motor.uploader_role == "Normal" && @ac_motor.release_status == "approved draft" && @ac_motor.uploaded_by_section == session[:user_section] %> 
+
+    <%= form_for(@ac_motor) do |f| %>
+        <% if @ac_motor.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@ac_motor.errors.count, "error") %> prohibited this ac motor from being saved:</h2>
+
+            <ul>
+            <% @ac_motor.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+          <div class="field">
+              <%= f.label :Status? %><br />
+              <%= f.text_field :release_status, :value => "released", :readonly => true %>
+          </div>
+          
+          <br />
+
+          <div class="actions">
+            <%= f.submit 'Release AC Motor', :name => 'create' %>
+          </div>
+      <% end %>
+    <% end %>

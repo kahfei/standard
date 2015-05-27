@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  partnumber: MyString
+  description: MyString
+  inner_hole_diameter: MyString
+  grommet_type: MyString
+  length: MyString
+  for_cord_od: MyString
+  material: MyString
+  drawing_norm: MyString
+  where_used_product: MyString
+  where_used_plant: MyString
+  remark: MyString
+  release_status: MyString
+  uploaded_by_section: MyString
+  uploader_role: MyString
+  uploader_name: MyString
+  need_to_edit_partnumber: false
+  need_to_edit_description: false
+  need_to_edit_inner_hole_diameter: false
+  need_to_edit_grommet_type: false
+  need_to_edit_length: false
+  need_to_edit_for_cord_od: false
+  need_to_edit_material: false
+  need_to_edit_drawing_norm: false
+  need_to_edit_where_used_product: false
+  need_to_edit_where_used_plant: false
+  need_to_edit_remark: false
+
+two:
+  partnumber: MyString
+  description: MyString
+  inner_hole_diameter: MyString
+  grommet_type: MyString
+  length: MyString
+  for_cord_od: MyString
+  material: MyString
+  drawing_norm: MyString
+  where_used_product: MyString
+  where_used_plant: MyString
+  remark: MyString
+  release_status: MyString
+  uploaded_by_section: MyString
+  uploader_role: MyString
+  uploader_name: MyString
+  need_to_edit_partnumber: false
+  need_to_edit_description: false
+  need_to_edit_inner_hole_diameter: false
+  need_to_edit_grommet_type: false
+  need_to_edit_length: false
+  need_to_edit_for_cord_od: false
+  need_to_edit_material: false
+  need_to_edit_drawing_norm: false
+  need_to_edit_where_used_product: false
+  need_to_edit_where_used_plant: false
+  need_to_edit_remark: false

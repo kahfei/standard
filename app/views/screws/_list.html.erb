@@ -1,0 +1,54 @@
+<div id="filterrific_results" %>
+<div><%= page_entries_info screws %></div>
+
+<table class="table table-hover">
+  <tr class="active">
+      <th class="text-center">Partnumber</th>
+      <th class="text-center">Status</th>
+      <th class="text-center">Description</th>
+      <th class="text-center">Screw drive</th>
+      <th class="text-center">Screw head</th>
+      <th class="text-center">Thread type</th>
+      <th class="text-center">Screw size</th>
+      <th class="text-center">Length</th>
+      <th class="text-center">Connection material</th>
+      <th class="text-center">Coating</th>
+      <th class="text-center">Drawing norm</th>
+      <th class="text-center">Where used product</th>
+      <th class="text-center">Where used plant</th>
+      <th class="text-center">Remark</th>
+      <th class="text-center">Reason</th>
+    </tr>
+
+  <tbody>
+    <% screws.each do |screw| %>
+      <% if screw.release_status == "needs editing" && screw.uploader_name == session[:user_name] %>
+        <tr class="danger">
+      <% elsif screw.release_status == "pending" && session[:user_role] == "Sectionhead" && screw.uploader_role == "Normal" && screw.uploaded_by_section == session[:user_section] || session[:user_role] == "Departmenthead" && screw.uploader_role == "Sectionhead" && screw.release_status == "pending" %>
+        <tr class="warning">
+      <% elsif screw.release_status == "pending" || screw.release_status == "needs editing" %>
+        <tr class="pending_parts">
+      <% else %>
+        <tr>
+      <% end %>
+        <td><%= link_to "#{screw.partnumber}", screw, method: :get %></td>
+        <td><%= screw.release_status %></td>
+        <td><%= screw.description %></td>
+        <td><%= screw.screw_drive %></td>
+        <td><%= screw.screw_head %></td>
+        <td><%= screw.thread_type %></td>
+        <td><%= screw.screw_size %></td>
+        <td><%= screw.length %></td>
+        <td><%= screw.connection_material %></td>
+        <td><%= screw.coating %></td>
+        <td><%= screw.drawing_norm %></td>
+        <td><%= screw.where_used_product %></td>
+        <td><%= screw.where_used_plant %></td>
+        <td><%= screw.remark %></td>
+        <td><%= screw.reason %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate screws %>
+</div>

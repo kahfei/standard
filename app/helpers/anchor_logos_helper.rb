@@ -1,0 +1,2 @@
+module AnchorLogosHelper
+end

@@ -1,0 +1,69 @@
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+ <%= part_status(@grease) %>
+
+  <p>
+    <b>Partnumber:</b>
+    <%= @grease.partnumber %>
+  </p>
+
+  <p>
+    <b>Description:</b>
+    <%= @grease.description %>
+  </p>
+
+  <p>
+    <b>Grease type:</b>
+    <%= @grease.grease_type %>
+  </p>
+
+  <p>
+    <b>Lubricated location:</b>
+    <%= @grease.lubricated_location %>
+  </p>
+
+  <p>
+    <b>Drawing norm:</b>
+    <%= @grease.drawing_norm %>
+  </p>
+
+  <p>
+    <b>Supplier:</b>
+    <%= @grease.supplier %>
+  </p>
+
+  <p>
+    <b>Where used product:</b>
+    <%= @grease.where_used_product %>
+  </p>
+
+  <p>
+    <b>Where used plant:</b>
+    <%= @grease.where_used_plant %>
+  </p><br />
+
+  <p>
+    <b>Reason for submission:</b>
+    <%= @grease.reason %>
+  </p><br />
+
+  <p>
+    <b>Submitted by:</b>
+    <%= @grease.uploader_name %>
+  </p>
+
+  <p>
+    <b>Created at:</b>
+    <%= @grease.created_at %>
+  </p>
+
+  <p>
+    <b>Last updated at:</b>
+    <%= @grease.updated_at %>
+  </p>
+ 
+<%= render 'shared/show_actions', :object => @grease %>

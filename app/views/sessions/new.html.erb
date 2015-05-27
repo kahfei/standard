@@ -1,0 +1,35 @@
+    <div class="container">    
+        <div id="loginbox" style="margin-top:80px;" class="mainbox col-md-5 col-md-offset-2 col-sm-7 col-sm-offset-1">
+            <div class="panel panel-info" >
+                <div class="panel-heading">
+                    <div class="panel-title">Sign In</div>
+                </div>     
+                <div style="padding-top:30px" class="panel-body" >
+                    <%= form_tag sessions_path, class: "form-horizontal" do %>
+                    <div style="margin-bottom: 20px" class="input-group">
+                    	<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <%= text_field_tag :name, params[:name], class: "form-control", placeholder: "username" %>
+                    </div>
+					<div style="margin-bottom: 20px" class="input-group">
+                       <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                       <%= password_field_tag :password, params[:password], class: "form-control", placeholder: "password" %>
+                    </div>
+                    <div style="margin-top:10px" class="form-group">
+                    <!-- Button -->
+                    <div class="col-sm-12 controls">
+                      <%= submit_tag "Login ", class: "btn btn-success" %>
+                    </div>
+                </div>
+                <% if flash[:alert] %>
+			  		<div class="alert alert-danger"><%= flash[:alert] %></div>
+				<% end %>
+                    
+                </div>
+                
+            	    <% end %>
+        	</div>                     
+        </div>  
+    </div>
+
+
+    

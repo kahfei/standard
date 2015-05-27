@@ -1,0 +1,81 @@
+<br />
+<h2>This part is waiting to get released!</h2>
+<br />
+  <p>
+    <b>Partnumber:</b>
+    <%= @copperwire.partnumber %>
+  </p>
+
+  <p>
+    <b>Description:</b>
+    <%= @copperwire.description %>
+  </p>
+
+  <p>
+    <b>Copperwire type:</b>
+    <%= @copperwire.copperwire_type %>
+  </p>
+
+  <p>
+    <b>Self bonded:</b>
+    <%= @copperwire.self_bonded %>
+  </p>
+
+  <p>
+    <b>Diameter:</b>
+    <%= @copperwire.diameter %>
+  </p>
+
+  <p>
+    <b>Drawing norm:</b>
+    <%= @copperwire.drawing_norm %>
+  </p>
+
+  <p>
+    <b>Supplier:</b>
+    <%= @copperwire.supplier %>
+  </p>
+
+  <p>
+    <b>Where used product:</b>
+    <%= @copperwire.where_used_product %>
+  </p>
+
+  <p>
+    <b>Where used plant:</b>
+    <%= @copperwire.where_used_plant %>
+  </p>
+  <br />
+
+  <p>
+    <b>Reason for submission:</b>
+    <%= @copperwire.reason %>
+  </p><br />
+
+  <% if session[:user_role] == "Sectionhead" && @copperwire.uploader_role == "Normal" && @copperwire.release_status == "approved draft" && @copperwire.uploaded_by_section == session[:user_section] %> 
+
+    <%= form_for(@copperwire) do |f| %>
+        <% if @copperwire.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@copperwire.errors.count, "error") %> prohibited this copperwire from being saved:</h2>
+
+            <ul>
+            <% @copperwire.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+          <div class="field">
+              <%= f.label :Status? %><br />
+              <%= f.text_field :release_status, :value => "released", :readonly => true %>
+          </div>
+          
+          <br />
+
+          <div class="actions">
+            <%= f.submit 'Release Copperwire', :name => 'create' %>
+          </div>
+      <% end %>
+    <% end %>

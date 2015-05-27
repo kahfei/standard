@@ -1,0 +1,103 @@
+<br />
+<h2>This part is waiting to get released!</h2>
+<br />
+
+<p>
+  <strong>Partnumber:</strong>
+  <%= @screw.partnumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @screw.description %>
+</p>
+
+<p>
+  <strong>Screw drive:</strong>
+  <%= @screw.screw_drive %>
+</p>
+
+<p>
+  <strong>Screw head:</strong>
+  <%= @screw.screw_head %>
+</p>
+
+<p>
+  <strong>Thread type:</strong>
+  <%= @screw.thread_type %>
+</p>
+
+<p>
+  <strong>Screw size:</strong>
+  <%= @screw.screw_size %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @screw.length %>
+</p>
+
+<p>
+  <strong>Connection material:</strong>
+  <%= @screw.connection_material %>
+</p>
+
+<p>
+  <strong>Coating:</strong>
+  <%= @screw.coating %>
+</p>
+
+<p>
+  <strong>Drawing norm:</strong>
+  <%= @screw.drawing_norm %>
+</p>
+
+<p>
+  <strong>Where used product:</strong>
+  <%= @screw.where_used_product %>
+</p>
+
+<p>
+  <strong>Where used plant:</strong>
+  <%= @screw.where_used_plant %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @screw.remark %>
+</p>
+
+<br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @screw.reason %>
+  </p><br />
+
+  <% if session[:user_role] == "Sectionhead" && @screw.uploader_role == "Normal" && @screw.release_status == "approved draft" && @screw.uploaded_by_section == session[:user_section] %> 
+
+    <%= form_for(@screw) do |f| %>
+        <% if @screw.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@screw.errors.count, "error") %> prohibited this screw from being saved:</h2>
+
+            <ul>
+            <% @screw.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+          <div class="field">
+              <%= f.label :Status? %><br />
+              <%= f.text_field :release_status, :value => "released", :readonly => true %>
+          </div>
+          
+          <br />
+
+          <div class="actions">
+            <%= f.submit 'Release Screw', :name => 'create' %>
+          </div>
+      <% end %>
+    <% end %>

@@ -1,0 +1,91 @@
+<%= form_for @user, :url => { :action => "update_details" }, :method => :GET do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<h1>User Profiles</h1>  
+  <fieldset>
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name, :value => session[:user_name], :readonly => true %>
+      </div>
+      <div class="field">
+        <%= f.label :fullname %>
+        <%= f.text_field :fullname %>
+      </div>
+
+      <% if session[:user_role] == "Superadmin" %>
+      <div class="field">
+        <%= f.label :role %>
+        <%= f.text_field :role, :value => "Superadmin", :readonly => true %>
+      </div>
+    <% end %>
+      
+    <% if session[:user_role] == "Departmenthead" %>
+      <div class="field">
+        <%= f.label :role %>
+        <%= f.text_field :role, :value => "Departmenthead", :readonly => true %>
+      </div>
+    <% end %>
+
+    <% if session[:user_role] == "Sectionhead" %>
+      <div class="field">
+        <%= f.label :role %>
+        <%= f.text_field :role, :value => "Sectionhead", :readonly => true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :section %>
+         <%= f.text_field :section, :value => session[:user_section], :readonly => true %>
+      </div>
+    <% end %>
+
+    <% if session[:user_role] == "Normal" %>
+      <div class="field">
+        <%= f.label :role %>
+        <%= f.text_field :role, :value => "Normal", :readonly => true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :section %>
+        <%= f.text_field :section, :value => session[:user_section], :readonly => true %>
+      </div>
+    <% end %>
+
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.text_field :email%>
+      </div>
+
+      <div class="field">
+        <%= f.label :phone %>
+        <%= f.text_field :phone%>
+      </div>
+
+      <div class="field">
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+      </div>
+  
+      <div class="field">
+        <%= f.label :password, 'Password' %>
+        <%= f.password_field :password, :size => 40 %>
+      </div>
+      <div class="field">
+        <%= f.label :password_confirmation, 'Confirm' %>
+        <%= f.password_field :password_confirmation, :size => 40 %>
+      </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  </fieldset>
+<% end %>
+

@@ -1,0 +1,105 @@
+<%= form_for(@cord) do |f| %>
+  <% if @cord.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cord.errors.count, "error") %> prohibited this cord from being saved:</h2>
+
+      <ul>
+      <% @cord.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :partnumber %><br>
+    <%= f.text_field :partnumber %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :cord_mat %><br>
+    <%= f.text_field :cord_mat %>
+  </div>
+  <div class="field">
+    <%= f.label :cord_type %><br>
+    <%= f.text_field :cord_type %>
+  </div>
+  <div class="field">
+    <%= f.label :plug_type %><br>
+    <%= f.text_field :plug_type %>
+  </div>
+  <div class="field">
+    <%= f.label :polarity %><br>
+    <%= f.select :polarity, Cord::POLARITY %>
+  </div>
+  <div class="field">
+    <%= f.label :cross_sec %><br>
+    <%= f.text_field :cross_sec %>
+  </div>
+  <div class="field">
+    <%= f.label :cord_od %><br>
+    <%= f.text_field :cord_od %>
+  </div>
+  <div class="field">
+    <%= f.label :length %><br>
+    <%= f.text_field :length %>
+  </div>
+  <div class="field">
+    <%= f.label :dismantled_length %><br>
+    <%= f.text_field :dismantled_length %>
+  </div>
+  <div class="field">
+    <%= f.label :switch_con %><br>
+    <%= f.text_field :switch_con %>
+  </div>
+  <div class="field">
+    <%= f.label :drawing_norm %><br>
+    <%= f.text_field :drawing_norm %>
+  </div>
+  <div class="field">
+    <%= f.label :where_used_product %><br>
+    <%= f.text_field :where_used_product %>
+  </div>
+  <div class="field">
+    <%= f.label :where_used_plant %><br>
+    <%= f.text_field :where_used_plant %>
+  </div>
+  <div class="field">
+    <%= f.label :cord_spec %><br>
+    <%= f.text_field :cord_spec %>
+  </div>
+  <div class="field">
+    <%= f.label :remark %><br>
+    <%= f.text_field :remark %>
+  </div>
+
+  <br />
+  <div class="field">
+    <%= f.label :reason_for_submission? %><br />
+    <%= f.text_field :reason %>
+  </div>   
+  <br />
+  
+
+  <% if session[:user_role] == "Normal" && @cord.uploader_name == nil || session[:user_role] == "Sectionhead" && @cord.uploader_name == nil %>
+      <div class="field">
+        <%= f.label :release_status %><br />
+        <%= f.text_field :release_status, :value => "pending", :readonly => true %>
+      </div>
+  <% end %>
+    
+  <% if @cord.uploader_name != session[:user_name] && session[:user_role] != "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Submit Cord', :name => 'submit' %>
+    </div>
+  <% end %>
+
+  <% if @cord.uploader_name == session[:user_name] || session[:user_role] == "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Update Cord', :name => 'create' %>
+    </div>
+  <% end %>
+<% end %>

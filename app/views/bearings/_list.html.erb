@@ -1,0 +1,59 @@
+<div id="filterrific_results" %>
+<div><%= page_entries_info bearings %></div>
+
+<table class="table table-hover">
+  <tr class="active">
+    <th class="text-center">Partnumber</th>
+    <th class="text-center">Status</th>
+    <th class="text-center">Description</th>
+    <th class="text-center">I Dia</th>
+    <th class="text-center">O Dia</th>
+    <th class="text-center">Width</th>
+    <th class="text-center">Bearing type</th>
+    <th class="text-center">Bearing no</th>
+    <th class="text-center">Radial clearance um</th>
+    <th class="text-center">Sealing</th>
+    <th class="text-center">Max speed rpm</th>
+    <th class="text-center">Position within product</th>
+    <th class="text-center">Drawing norm</th>
+    <th class="text-center">Where used product</th>
+    <th class="text-center">Where used plant</th>
+    <th class="text-center">Supplier</th>
+    <th class="text-center">Remark</th>
+    <th class="text-center">Reason</th>
+  </tr>
+
+<% bearings.each do |bearing| %>
+  <% if bearing.release_status == "needs editing" && bearing.uploader_name == session[:user_name] %>
+    <tr class="danger">
+  <% elsif bearing.release_status == "pending" && session[:user_role] == "Sectionhead" && bearing.uploader_role == "Normal" && bearing.uploaded_by_section == session[:user_section] || session[:user_role] == "Departmenthead" && bearing.uploader_role == "Sectionhead" && bearing.release_status == "pending" %>
+    <tr class="warning">
+  <% elsif bearing.release_status == "pending" || bearing.release_status == "needs editing" %>
+    <tr class="pending_parts">
+  <% else %>
+    <tr>
+  <% end %>
+        <td><%= link_to "#{bearing.partnumber}", bearing, method: :get %></td>
+        <td><%= bearing.release_status %></td>
+        <td><%= bearing.description %></td>
+        <td><%= bearing.i_dia %></td>
+        <td><%= bearing.o_dia %></td>
+        <td><%= bearing.width %></td>
+        <td><%= bearing.bearing_type %></td>
+        <td><%= bearing.bearing_no %></td>
+        <td><%= bearing.radial_clearance_um %></td>
+        <td><%= bearing.sealing %></td>
+        <td><%= bearing.max_speed_rpm %></td>
+        <td><%= bearing.position_within_product %></td>
+        <td><%= bearing.drawing_norm %></td>
+        <td><%= bearing.where_used_product %></td>
+        <td><%= bearing.where_used_plant %></td>
+        <td><%= bearing.supplier %></td>
+        <td><%= bearing.remark %></td>
+        <td><%= bearing.reason %></td>
+
+    </tr>
+<% end %>
+</table>
+<%= will_paginate bearings %>
+</div>

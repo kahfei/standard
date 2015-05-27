@@ -1,0 +1,409 @@
+shell.o: shell.c \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/stdlib.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/crtdefs.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_mingw.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_mingw_mac.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/vadefs.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/sdks/_mingw_directx.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include-fixed/limits.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include-fixed/syslimits.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/limits.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/malloc.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/string.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/sec_api/string_s.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/stdio.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_mingw_print_push.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_mingw_off_t.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_mingw_print_pop.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/assert.h \
+ sqlite3.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/stdarg.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/stdarg.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_mingw_stdarg.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/ctype.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/io.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/sec_api/io_s.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/windows.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/sdkddkver.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/excpt.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/windef.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winnt.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_mingw_unicode.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/specstrings.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/basetsd.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/guiddef.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/intrin.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/setjmp.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/stddef.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/stddef.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/x86intrin.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/ia32intrin.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/mmintrin.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/xmmintrin.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/mm_malloc.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/emmintrin.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/immintrin.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/pshpack4.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/poppack.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/pshpack4.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/pshpack2.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/poppack.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/pshpack2.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/pshpack8.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winbase.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winerror.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/wingdi.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/pshpack1.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winuser.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/tvout.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winnls.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/wincon.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winver.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winreg.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/reason.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winnetwk.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/virtdisk.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/cderr.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/dde.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/ddeml.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/dlgs.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/lzexpand.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/mmsystem.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/nb30.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpc.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/pshpack8.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpcdce.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpcdcep.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpcnsi.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpcnterr.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpcasync.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/shellapi.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winperf.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winsock.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_timeval.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_bsd_types.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/inaddr.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/psdk_inc/_socket_types.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/psdk_inc/_fd_types.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/psdk_inc/_ip_types.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/psdk_inc/_ip_mreq1.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/psdk_inc/_wsadata.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/psdk_inc/_xmitfile.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/psdk_inc/_wsa_errnos.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/wincrypt.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/bcrypt.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/ncrypt.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winefs.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winscard.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/wtypes.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpc.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpcndr.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpcnsip.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/basetsd.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/guiddef.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/psdk_inc/_varenum.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winioctl.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winsmcrd.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winspool.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/prsht.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/ole2.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/objbase.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpcndr.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/unknwn.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/windows.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/ole2.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/wtypes.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/objidl.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/unknwn.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/cguid.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/urlmon.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/objidl.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/oleidl.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/servprov.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/msxml.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/oaidl.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/propidl.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/oleauto.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/oaidl.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/oleidl.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/commdlg.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/stralign.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/sec_api/stralign_s.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winsvc.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/mcx.h \
+ d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/imm.h
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/stdlib.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/crtdefs.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_mingw.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_mingw_mac.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/vadefs.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/sdks/_mingw_directx.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/sdks/_mingw_ddk.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include-fixed/limits.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include-fixed/syslimits.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/limits.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/sec_api/stdlib_s.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/malloc.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/string.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/sec_api/string_s.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/stdio.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_mingw_print_push.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_mingw_off_t.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/sec_api/stdio_s.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_mingw_print_pop.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/assert.h:
+
+sqlite3.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/stdarg.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/stdarg.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_mingw_stdarg.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/ctype.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/io.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/sec_api/io_s.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/windows.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/sdkddkver.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/excpt.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/windef.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winnt.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_mingw_unicode.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/specstrings.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/basetsd.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/guiddef.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/intrin.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/setjmp.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/stddef.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/stddef.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/x86intrin.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/ia32intrin.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/mmintrin.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/xmmintrin.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/mm_malloc.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/emmintrin.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/include/immintrin.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/pshpack4.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/poppack.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/pshpack4.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/pshpack2.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/poppack.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/pshpack2.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/pshpack8.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winbase.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winerror.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/wingdi.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/pshpack1.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winuser.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/tvout.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winnls.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/wincon.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winver.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winreg.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/reason.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winnetwk.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/virtdisk.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/cderr.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/dde.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/ddeml.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/dlgs.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/lzexpand.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/mmsystem.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/nb30.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpc.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/pshpack8.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpcdce.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpcdcep.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpcnsi.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpcnterr.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpcasync.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/shellapi.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winperf.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winsock.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_timeval.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/_bsd_types.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/inaddr.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/psdk_inc/_socket_types.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/psdk_inc/_fd_types.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/psdk_inc/_ip_types.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/psdk_inc/_ip_mreq1.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/psdk_inc/_wsadata.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/psdk_inc/_xmitfile.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/psdk_inc/_wsa_errnos.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/wincrypt.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/bcrypt.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/ncrypt.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winefs.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winscard.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/wtypes.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpc.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpcndr.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpcnsip.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/basetsd.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/guiddef.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/psdk_inc/_varenum.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winioctl.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winsmcrd.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winspool.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/prsht.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/ole2.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/objbase.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/rpcndr.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/unknwn.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/windows.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/ole2.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/wtypes.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/objidl.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/unknwn.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/cguid.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/urlmon.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/objidl.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/oleidl.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/servprov.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/msxml.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/oaidl.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/propidl.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/oleauto.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/oaidl.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/oleidl.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/commdlg.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/stralign.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/sec_api/stralign_s.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/winsvc.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/mcx.h:
+
+d:\exercise\number_backup\sqlite_autoconf\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.2/../../../../x86_64-w64-mingw32/include/imm.h:

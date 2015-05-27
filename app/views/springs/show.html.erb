@@ -1,0 +1,154 @@
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+
+ <%= part_status(@spring) %>
+
+<p>
+  <strong>Partnumber:</strong>
+  <%= @spring.partnumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @spring.description %>
+</p>
+
+<p>
+  <strong>Spring type:</strong>
+  <%= @spring.spring_type %>
+</p>
+
+<p>
+  <strong>Material dia:</strong>
+  <%= @spring.material_dia %>
+</p>
+
+<p>
+  <strong>Mean dia:</strong>
+  <%= @spring.mean_dia %>
+</p>
+
+<p>
+  <strong>Free length:</strong>
+  <%= @spring.free_length %>
+</p>
+
+<p>
+  <strong>No of active coils:</strong>
+  <%= @spring.no_of_active_coils %>
+</p>
+
+<p>
+  <strong>Solid length max:</strong>
+  <%= @spring.solid_length_max %>
+</p>
+
+<p>
+  <strong>Dimension f1:</strong>
+  <%= @spring.dimension_f1 %>
+</p>
+
+<p>
+  <strong>Dimension l1:</strong>
+  <%= @spring.dimension_l1 %>
+</p>
+
+<p>
+  <strong>Dimension f2:</strong>
+  <%= @spring.dimension_f2 %>
+</p>
+
+<p>
+  <strong>Dimension l2:</strong>
+  <%= @spring.dimension_l2 %>
+</p>
+
+<p>
+  <strong>Initial load nm:</strong>
+  <%= @spring.initial_load_nm %>
+</p>
+
+<p>
+  <strong>Final load nm:</strong>
+  <%= @spring.final_load_nm %>
+</p>
+
+<p>
+  <strong>Torque arm length:</strong>
+  <%= @spring.torque_arm_length %>
+</p>
+
+<p>
+  <strong>Hook length:</strong>
+  <%= @spring.hook_length %>
+</p>
+
+<p>
+  <strong>Hook arc radius:</strong>
+  <%= @spring.hook_arc_radius %>
+</p>
+
+<p>
+  <strong>Spring constant:</strong>
+  <%= @spring.spring_constant %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @spring.unit %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @spring.supplier %>
+</p>
+
+<p>
+  <strong>Drawing norm:</strong>
+  <%= @spring.drawing_norm %>
+</p>
+
+<p>
+  <strong>Where used product:</strong>
+  <%= @spring.where_used_product %>
+</p>
+
+<p>
+  <strong>Where used plant:</strong>
+  <%= @spring.where_used_plant %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @spring.remark %>
+</p>
+
+
+
+<br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @spring.reason %>
+  </p><br />
+
+  <p>
+    <b>Submitted by:</b>
+    <%= @spring.uploader_name %>
+  </p>
+
+  <p>
+    <b>Created at:</b>
+    <%= @spring.created_at %>
+  </p>
+
+  <p>
+    <b>Last updated at:</b>
+    <%= @spring.updated_at %>
+  </p>
+
+<%= render 'shared/show_actions', :object => @spring %>

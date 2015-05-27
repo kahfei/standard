@@ -1,0 +1,93 @@
+<%= form_for(@carbon_brush) do |f| %>
+  <% if @carbon_brush.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@carbon_brush.errors.count, "error") %> prohibited this carbon_brush from being saved:</h2>
+
+      <ul>
+      <% @carbon_brush.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :partnumber %><br>
+    <%= f.text_field :partnumber %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :components %><br>
+    <%= f.text_field :components %>
+  </div>
+  <div class="field">
+    <%= f.label :cross_sec %><br>
+    <%= f.text_field :cross_sec %>
+  </div>
+  <div class="field">
+    <%= f.label :length %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :length %>
+  </div>
+  <div class="field">
+    <%= f.label :wire_length_or_spring_free_length %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :wire_length_or_spring_free_length %>
+  </div>
+  <div class="field">
+    <%= f.label :radius_for_commutator_mm %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :radius_for_commutator_mm %>
+  </div>
+  <div class="field">
+    <%= f.label :cut_off %><br>
+    <%= f.select :cut_off, CarbonBrush::CUT_OFF %>
+  </div>
+  <div class="field">
+    <%= f.label :supplier %><br>
+    <%= f.text_field :supplier %>
+  </div>
+  <div class="field">
+    <%= f.label :drawing_norm %><br>
+    <%= f.text_field :drawing_norm %>
+  </div>
+  <div class="field">
+    <%= f.label :where_used_product %><br>
+    <%= f.text_field :where_used_product %>
+  </div>
+  <div class="field">
+    <%= f.label :where_used_plant %><br>
+    <%= f.text_field :where_used_plant %>
+  </div>
+  <div class="field">
+    <%= f.label :remark %><br>
+    <%= f.text_field :remark %>
+  </div>
+
+  <br />
+  <div class="field">
+    <%= f.label :reason_for_submission? %><br />
+    <%= f.text_field :reason %>
+  </div>   
+  <br />
+  
+
+  <% if session[:user_role] == "Normal" && @carbon_brush.uploader_name == nil || session[:user_role] == "Sectionhead" && @carbon_brush.uploader_name == nil %>
+      <div class="field">
+        <%= f.label :release_status %><br />
+        <%= f.text_field :release_status, :value => "pending", :readonly => true %>
+      </div>
+  <% end %>
+    
+  <% if @carbon_brush.uploader_name != session[:user_name] && session[:user_role] != "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Submit Carbon brush', :name => 'submit' %>
+    </div>
+  <% end %>
+
+  <% if @carbon_brush.uploader_name == session[:user_name] || session[:user_role] == "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Update Carbon brush', :name => 'create' %>
+    </div>
+  <% end %>
+<% end %>

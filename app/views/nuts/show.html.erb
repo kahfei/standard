@@ -1,0 +1,82 @@
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+
+ <%= part_status(@nut) %>
+
+<p>
+  <strong>Partnumber:</strong>
+  <%= @nut.partnumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @nut.description %>
+</p>
+
+<p>
+  <strong>Nut type:</strong>
+  <%= @nut.nut_type %>
+</p>
+
+<p>
+  <strong>Nut size:</strong>
+  <%= @nut.nut_size %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @nut.width %>
+</p>
+
+<p>
+  <strong>Drawing norm:</strong>
+  <%= @nut.drawing_norm %>
+</p>
+
+<p>
+  <strong>Coating:</strong>
+  <%= @nut.coating %>
+</p>
+
+<p>
+  <strong>Where used product:</strong>
+  <%= @nut.where_used_product %>
+</p>
+
+<p>
+  <strong>Where used plant:</strong>
+  <%= @nut.where_used_plant %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @nut.remark %>
+</p>
+
+<br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @nut.reason %>
+  </p><br />
+
+  <p>
+    <b>Submitted by:</b>
+    <%= @nut.uploader_name %>
+  </p>
+
+  <p>
+    <b>Created at:</b>
+    <%= @nut.created_at %>
+  </p>
+
+  <p>
+    <b>Last updated at:</b>
+    <%= @nut.updated_at %>
+  </p>
+
+<%= render 'shared/show_actions', :object => @nut %>

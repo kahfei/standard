@@ -1,0 +1,42 @@
+<% if is_section_head? %>
+	<% @approved_objs_from_same_section.each do |objs| %>
+	  <% objs.each do |obj| %>
+		  <% if obj.class == AcMotor %>
+		    <div id="collapseApproveddraft" class="row">
+		      <div class="col-sm-3"><%= link_to "#{obj.arm_part_no}", polymorphic_path(obj) %></div>
+			  <div class="col-sm-3"><%= obj.release_status %></div>
+			  <div class="col-sm-3"><%= obj.class %></div>
+			  <div class="col-sm-3"><%= obj.uploader_name %></div>
+			</div>
+		  <% else %>
+		    <div id="collapseApproveddraft" class="row">
+		      <div class="col-sm-3"><%= link_to "#{obj.partnumber}", polymorphic_path(obj) %></div>
+			  <div class="col-sm-3"><%= obj.release_status %></div>
+			  <div class="col-sm-3"><%= obj.class %></div>
+			  <div class="col-sm-3"><%= obj.uploader_name %></div>
+			</div>
+		  <% end %>
+	  <% end %>
+	<% end %>
+<% elsif is_department_head? %>
+	<% @approved_objs_from_section_head.each do |objs| %>
+	  <% objs.each do |obj| %>
+		  <% if obj.class == AcMotor %>
+		    <div id="collapseApproveddraft" class="row">
+		      <div class="col-sm-3"><%= link_to "#{obj.arm_part_no}", polymorphic_path(obj) %></div>
+			  <div class="col-sm-3"><%= obj.release_status %></div>
+			  <div class="col-sm-3"><%= obj.class %></div>
+			  <div class="col-sm-3"><%= obj.uploader_name %></div>
+			</div>
+		  <% else %>
+		    <div id="collapseApproveddraft" class="row">
+		      <div class="col-sm-3"><%= link_to "#{obj.partnumber}", polymorphic_path(obj) %></div>
+			  <div class="col-sm-3"><%= obj.release_status %></div>
+			  <div class="col-sm-3"><%= obj.class %></div>
+			  <div class="col-sm-3"><%= obj.uploader_name %></div>
+			</div>
+		  <% end %>
+	  <% end %>
+	<% end %>
+<% end %>
+	  

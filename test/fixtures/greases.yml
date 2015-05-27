@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  partnumber: MyString
+  description: MyString
+  grease_type: MyString
+  lubricated_location: MyString
+  drawing_norm: MyString
+  supplier: MyString
+  where_used_product: MyString
+
+two:
+  partnumber: MyString
+  description: MyString
+  grease_type: MyString
+  lubricated_location: MyString
+  drawing_norm: MyString
+  supplier: MyString
+  where_used_product: MyString

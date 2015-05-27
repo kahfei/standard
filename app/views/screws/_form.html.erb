@@ -1,0 +1,91 @@
+<%= form_for(@screw) do |f| %>
+  <% if @screw.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@screw.errors.count, "error") %> prohibited this screw from being saved:</h2>
+
+      <ul>
+      <% @screw.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :partnumber %><br>
+    <%= f.text_field :partnumber %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :screw_drive %><br>
+    <%= f.text_field :screw_drive %>
+  </div>
+  <div class="field">
+    <%= f.label :screw_head %><br>
+    <%= f.text_field :screw_head %>
+  </div>
+  <div class="field">
+    <%= f.label :thread_type %><br>
+    <%= f.text_field :thread_type %>
+  </div>
+  <div class="field">
+    <%= f.label :screw_size %><br>
+    <%= f.text_field :screw_size %>
+  </div>
+  <div class="field">
+    <%= f.label :length %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :length %>
+  </div>
+  <div class="field">
+    <%= f.label :connection_material %><br>
+    <%= f.text_field :connection_material %>
+  </div>
+  <div class="field">
+    <%= f.label :coating %><br>
+    <%= f.text_field :coating %>
+  </div>
+  <div class="field">
+    <%= f.label :drawing_norm %><br>
+    <%= f.text_field :drawing_norm %>
+  </div>
+  <div class="field">
+    <%= f.label :where_used_product %><br>
+    <%= f.text_field :where_used_product %>
+  </div>
+  <div class="field">
+    <%= f.label :where_used_plant %><br>
+    <%= f.text_field :where_used_plant %>
+  </div>
+  <div class="field">
+    <%= f.label :remark %><br>
+    <%= f.text_field :remark %>
+  </div>
+  <br />
+  <div class="field">
+    <%= f.label :reason_for_submission? %><br />
+    <%= f.text_field :reason %>
+  </div>   
+  <br />
+
+  <% if session[:user_role] == "Normal" && @screw.uploader_name == nil || session[:user_role] == "Sectionhead" && @screw.uploader_name == nil %>
+      <div class="field">
+        <%= f.label :release_status %><br />
+        <%= f.text_field :release_status, :value => "pending", :readonly => true %>
+      </div>
+  <% end %>
+    
+  <% if @screw.uploader_name != session[:user_name] && session[:user_role] != "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Submit Screw', :name => 'submit' %>
+    </div>
+  <% end %>
+
+  <% if @screw.uploader_name == session[:user_name] || session[:user_role] == "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Update Screw', :name => 'create' %>
+    </div>
+  <% end %>
+<% end %>

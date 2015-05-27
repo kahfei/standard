@@ -1,0 +1,65 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  partnumber: MyString
+  description: MyString
+  components: MyString
+  cross_sec: MyString
+  length: 9.99
+  wire_length_or_spring_free_length: 9.99
+  radius_for_commutator_mm: 9.99
+  cut_off: MyString
+  supplier: MyString
+  drawing_norm: MyString
+  where_used_product: MyString
+  where_used_plant: MyString
+  remark: MyString
+  release_status: MyString
+  uploaded_by_section: MyString
+  uploader_role: MyString
+  uploader_name: MyString
+  need_to_edit_partnumber: false
+  need_to_edit_description: false
+  need_to_edit_components: false
+  need_to_edit_cross_sec: false
+  need_to_edit_length: false
+  need_to_edit_wire_length_or_spring_free_length: false
+  need_to_edit_radius_for_commutator_mm: false
+  need_to_edit_cut_off: false
+  need_to_edit_supplier: false
+  need_to_edit_drawing_norm: false
+  need_to_edit_where_used_product: false
+  need_to_edit_where_used_plant: false
+  need_to_edit_remark: false
+
+two:
+  partnumber: MyString
+  description: MyString
+  components: MyString
+  cross_sec: MyString
+  length: 9.99
+  wire_length_or_spring_free_length: 9.99
+  radius_for_commutator_mm: 9.99
+  cut_off: MyString
+  supplier: MyString
+  drawing_norm: MyString
+  where_used_product: MyString
+  where_used_plant: MyString
+  remark: MyString
+  release_status: MyString
+  uploaded_by_section: MyString
+  uploader_role: MyString
+  uploader_name: MyString
+  need_to_edit_partnumber: false
+  need_to_edit_description: false
+  need_to_edit_components: false
+  need_to_edit_cross_sec: false
+  need_to_edit_length: false
+  need_to_edit_wire_length_or_spring_free_length: false
+  need_to_edit_radius_for_commutator_mm: false
+  need_to_edit_cut_off: false
+  need_to_edit_supplier: false
+  need_to_edit_drawing_norm: false
+  need_to_edit_where_used_product: false
+  need_to_edit_where_used_plant: false
+  need_to_edit_remark: false

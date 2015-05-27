@@ -1,0 +1,110 @@
+	<h3>Welcome to the standard parts library</h3>
+
+	<% if flash[:warning] or flash[:notice] %>
+	  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+	    <%= flash[:warning] || flash[:notice] %>
+	  </div>
+	<% end %>
+
+	<h3><span class="label label-info"> Brief Guide </span></h3>
+		<dl class="dl-horizontal">
+			<dt>Flow Chart</dt>
+			<dd>
+			Flow chart for standard part library
+				<%= link_to "./flowchart.xlsx" do %>
+				 <span class="glyphicon glyphicon-link"></span>
+				<% end %>
+			</dd>
+		</dl>
+		<dl class="dl-horizontal">
+			<dt>Part status flow</dt>
+			<dd>
+				<%= image_tag("flow.png") %>
+			</dd>
+		</dl>
+
+		<dl class="dl-horizontal">
+			<dt>Search function</dt>
+			<dd>
+				<%= image_tag("search_and_filter.png") %>
+				<ol>
+					<li>Type in any keyword to perform search</li>
+					<li>Click filter icon to access advanced filtering features</li>
+				</ol>
+			</dd>
+		</dl>
+
+	<% if is_superadmin? %>
+		
+	<% elsif is_section_head? || is_department_head? %>
+		<dl class="dl-horizontal">
+			<dt>Pending Actions</dt>
+			<dd>
+			Please check if any parts pending your approval or release at pending parts section
+			<%= image_tag("pending_parts.png") %>
+
+			<br/>
+			You should then see this screen,
+			<%= image_tag("pending_list.png") %> 
+				<ol>
+					<li>List of newly created part from your subordinate pending your approval</li>
+					<li>List of parts at approved draft status pending your release </li>
+					<li>List of parts need further correction</li>
+					<li>Click on <span class="glyphicon glyphicon-expand"></span> to act on a part</li>
+				</ol>
+
+
+			<dt>Approving part</dt>
+			<dd>
+				<%= image_tag("approving.png") %>
+				<br/>
+				Check if information provided is correct. 
+					<ul>
+						<li>Click "Approve" if yes</li>
+						<li>Click "Need Editing" if there are corrections need to be done</li>
+					</ul>
+			</dd>
+
+			<dt>Need Editing</dt>
+			<dd>
+				<%= image_tag("need_editing.png") %>
+				<br/>
+				<ul>
+					<li>Select checkbox for field that need correction, then click Update button</li>
+					<li>Click on Reject button to complete reject the part</li>
+				</ul>
+			</dd>
+			<dt>Release Draft</dt>
+			<dd>
+			<br/><%= image_tag("release_draft.png") %>
+				<br/>
+				Click Release Draft button to release it</dd>
+			
+		</dl>
+
+	<% else %>
+		<dl class="dl-horizontal">
+			<dt>Pending Actions</dt>
+			<dd>
+			Click on Pending parts section to check if any parts created by you need correction
+			<br/><%= image_tag("pending_parts.png") %><br/>
+			List of parts pending correction show up here
+			<br/><%= image_tag("pending_correction.png") %><br/>Click on <span class="glyphicon glyphicon-expand"></span> to act on the part
+
+			<dt>Editing</dt>
+			<dd>
+				<br/><%= image_tag("show.png") %><br/>
+				Click on Edit button
+				<br/><%= image_tag("editing.png") %><br/>
+				<ul>
+				  <li>1. Fields need attention are highlighted here</li>
+				  <li>2. Only field marked by your superior for correction are active</li>
+				  <li>3. Click on Update button once it is done. The part will now need your superior approval again.</li>
+				</ul>
+
+			</dd>
+
+
+		</dl>
+	<% end %>
+

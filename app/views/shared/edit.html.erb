@@ -1,0 +1,29 @@
+<div class="row">
+    <% if @object.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@object.errors.count, "error") %> prohibited this ac motor from being saved:</h2>
+
+        <ul>
+        <% @object.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <%= form_for @object do |f| %>
+      <% editable_fields(@object).each do |editable_field| %>
+        <div class='form-group'> 
+          <div class = 'col-sm-3'>
+            <%= f.label editable_field[0].gsub("need_to_edit_","") %>
+          </div>
+            <%= f.text_field editable_field[0].gsub("need_to_edit_","")%>
+        </div>
+      <% end %>
+        <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-10">
+            <%= f.submit 'Update', :name => 'submit', class: "btn btn-primary" %>
+          </div>
+        </div>
+    <% end %>
+</div>
+    

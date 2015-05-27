@@ -1,0 +1,12 @@
+<h1>Editing bearing</h1>
+<% if session[:user_role] == "Superadmin" || @bearing.uploader_name == session[:user_name] && @bearing.release_status == "pending" %>
+	<%= render 'form' %>
+<% elsif @bearing.release_status == "needs editing" && session[:user_role] == "Normal" && session[:user_name] == @bearing.uploader_name || @bearing.release_status == "needs editing" && session[:user_role] == "Sectionhead" && session[:user_name] == @bearing.uploader_name %>
+	<%= render 'shared/make_correction', :object => @bearing %>
+<% elsif session[:user_role] == "Sectionhead" && @bearing.uploaded_by_section == session[:user_section] && @bearing.release_status == "pending" || session[:user_role] == "Departmenthead" && @bearing.uploader_role == "Sectionhead" && @bearing.release_status == "pending" %>
+	<%= render 'form_approval' %>
+<% elsif session[:user_role] == "Sectionhead" && @bearing.uploaded_by_section == session[:user_section] && @bearing.release_status == "approved draft" && session[:user_name] != @bearing.uploader_name || session[:user_role] == "Departmenthead" && @bearing.uploader_role == "Sectionhead" && @bearing.release_status == "approved draft" %>
+	<%= render 'form_finalrelease' %>
+<% elsif %>
+	<h2>You don't have permission to edit this record!</h2>
+<% end %>

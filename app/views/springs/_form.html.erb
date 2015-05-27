@@ -1,0 +1,136 @@
+<%= form_for(@spring) do |f| %>
+  <% if @spring.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@spring.errors.count, "error") %> prohibited this spring from being saved:</h2>
+
+      <ul>
+      <% @spring.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :partnumber %><br>
+    <%= f.text_field :partnumber %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :spring_type %><br>
+    <%= f.text_field :spring_type %>
+  </div>
+  <div class="field">
+    <%= f.label :material_dia %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :material_dia %>
+  </div>
+  <div class="field">
+    <%= f.label :mean_dia %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :mean_dia %>
+  </div>
+  <div class="field">
+    <%= f.label :free_length %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :free_length %>
+  </div>
+  <div class="field">
+    <%= f.label :no_of_active_coils %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :no_of_active_coils %>
+  </div>
+  <div class="field">
+    <%= f.label :solid_length_max %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :solid_length_max %>
+  </div>
+  <div class="field">
+    <%= f.label :dimension_f1 %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :dimension_f1 %>
+  </div>
+  <div class="field">
+    <%= f.label :dimension_l1 %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :dimension_l1 %>
+  </div>
+  <div class="field">
+    <%= f.label :dimension_f2 %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :dimension_f2 %>
+  </div>
+  <div class="field">
+    <%= f.label :dimension_l2 %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :dimension_l2 %>
+  </div>
+  <div class="field">
+    <%= f.label :initial_load_nm %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :initial_load_nm %>
+  </div>
+  <div class="field">
+    <%= f.label :final_load_nm %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :final_load_nm %>
+  </div>
+  <div class="field">
+    <%= f.label :torque_arm_length %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :torque_arm_length %>
+  </div>
+  <div class="field">
+    <%= f.label :hook_length %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :hook_length %>
+  </div>
+  <div class="field">
+    <%= f.label :hook_arc_radius %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :hook_arc_radius %>
+  </div>
+  <div class="field">
+    <%= f.label :spring_constant %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :spring_constant %>
+  </div>
+  <div class="field">
+    <%= f.label :unit %><br>
+    <%= f.text_field :unit %>
+  </div>
+  <div class="field">
+    <%= f.label :supplier %><br>
+    <%= f.text_field :supplier %>
+  </div>
+  <div class="field">
+    <%= f.label :drawing_norm %><br>
+    <%= f.text_field :drawing_norm %>
+  </div>
+  <div class="field">
+    <%= f.label :where_used_product %><br>
+    <%= f.text_field :where_used_product %>
+  </div>
+  <div class="field">
+    <%= f.label :where_used_plant %><br>
+    <%= f.text_field :where_used_plant %>
+  </div>
+  <div class="field">
+    <%= f.label :remark %><br>
+    <%= f.text_field :remark %>
+  </div>
+  <br />
+  <div class="field">
+    <%= f.label :reason_for_submission? %><br />
+    <%= f.text_field :reason %>
+  </div>   
+  <br />
+  
+
+  <% if session[:user_role] == "Normal" && @spring.uploader_name == nil || session[:user_role] == "Sectionhead" && @spring.uploader_name == nil %>
+      <div class="field">
+        <%= f.label :release_status %><br />
+        <%= f.text_field :release_status, :value => "pending", :readonly => true %>
+      </div>
+  <% end %>
+    
+  <% if @spring.uploader_name != session[:user_name] && session[:user_role] != "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Submit spring', :name => 'submit' %>
+    </div>
+  <% end %>
+
+  <% if @spring.uploader_name == session[:user_name] || session[:user_role] == "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Update spring', :name => 'create' %>
+    </div>
+  <% end %>
+<% end %>

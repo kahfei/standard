@@ -1,0 +1,2 @@
+module CordClipsHelper
+end

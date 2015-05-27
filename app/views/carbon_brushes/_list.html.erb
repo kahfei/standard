@@ -1,0 +1,56 @@
+<div id="filterrific_results" %>
+<div><%= page_entries_info carbon_brushes %></div>
+
+<table class="table table-hover">
+
+  <tr class="active">
+      <th class="text-center">Partnumber</th>
+      <th class="text-center">Status</th>
+      <th class="text-center">Description</th>
+      <th class="text-center">Components</th>
+      <th class="text-center">Cross sec</th>
+      <th class="text-center">Length</th>
+      <th class="text-center">Wire length or spring free length</th>
+      <th class="text-center">Radius for commutator mm</th>
+      <th class="text-center">Cut off</th>
+      <th class="text-center">Supplier</th>
+      <th class="text-center">Drawing norm</th>
+      <th class="text-center">Where used product</th>
+      <th class="text-center">Where used plant</th>
+      <th class="text-center">Remark</th>
+      <th class="text-center">Reason</th>
+    </tr>
+
+
+  <tbody>
+    <% carbon_brushes.each do |carbon_brush| %>
+      <% if carbon_brush.release_status == "needs editing" && carbon_brush.uploader_name == session[:user_name] %>
+        <tr class="danger">
+      <% elsif carbon_brush.release_status == "pending" && session[:user_role] == "Sectionhead" && carbon_brush.uploader_role == "Normal" && carbon_brush.uploaded_by_section == session[:user_section] || session[:user_role] == "Departmenthead" && carbon_brush.uploader_role == "Sectionhead" && carbon_brush.release_status == "pending" %>
+        <tr class="warning">
+      <% elsif carbon_brush.release_status == "pending" || carbon_brush.release_status == "needs editing" %>
+        <tr class="pending_parts">
+      <% else %>
+        <tr>
+      <% end %>
+        <td><%= link_to "#{carbon_brush.partnumber}", carbon_brush, method: :get %></td>
+        <td><%= carbon_brush.release_status %></td>
+        <td><%= carbon_brush.description %></td>
+        <td><%= carbon_brush.components %></td>
+        <td><%= carbon_brush.cross_sec %></td>
+        <td><%= carbon_brush.length %></td>
+        <td><%= carbon_brush.wire_length_or_spring_free_length %></td>
+        <td><%= carbon_brush.radius_for_commutator_mm %></td>
+        <td><%= carbon_brush.cut_off %></td>
+        <td><%= carbon_brush.supplier %></td>
+        <td><%= carbon_brush.drawing_norm %></td>
+        <td><%= carbon_brush.where_used_product %></td>
+        <td><%= carbon_brush.where_used_plant %></td>
+        <td><%= carbon_brush.remark %></td>
+        <td><%= carbon_brush.reason %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate carbon_brushes %>
+</div>

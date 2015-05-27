@@ -1,0 +1,79 @@
+<br />
+<h2>This part is waiting to get released!</h2>
+<br />
+<p>
+  <b>Partnumber:</b>
+  <%= @brush_holder.partnumber %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @brush_holder.description %>
+</p>
+
+<p>
+  <b>Brush holder type:</b>
+  <%= @brush_holder.brush_holder_type %>
+</p>
+
+<p>
+  <b>Material:</b>
+  <%= @brush_holder.material %>
+</p>
+
+<p>
+  <b>Drawing norm:</b>
+  <%= @brush_holder.drawing_norm %>
+</p>
+
+<p>
+  <b>Corresponding carbon brush:</b>
+  <%= @brush_holder.corresponding_carbon_brush %>
+</p>
+
+<p>
+  <b>Supplier:</b>
+  <%= @brush_holder.supplier %>
+</p>
+
+<p>
+  <b>Where used product:</b>
+  <%= @brush_holder.where_used_product %>
+</p>
+
+<p>
+  <b>Where used plant:</b>
+  <%= @brush_holder.where_used_plant %>
+</p>
+<p>
+    <b>Reason for submission:</b>
+    <%= @brush_holder.reason %>
+  </p><br />
+
+<% if session[:user_role] == "Sectionhead" && @brush_holder.uploader_role == "Normal" && @brush_holder.release_status == "approved draft" && @brush_holder.uploaded_by_section == session[:user_section] %> 
+
+    <%= form_for(@brush_holder) do |f| %>
+        <% if @brush_holder.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@brush_holder.errors.count, "error") %> prohibited this brush holder from being saved:</h2>
+
+            <ul>
+            <% @brush_holder.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+          <div class="field">
+              <%= f.label :Status? %><br />
+              <%= f.text_field :release_status, :value => "released", :readonly => true %>
+          </div>
+          
+          <br />
+
+          <div class="actions">
+            <%= f.submit 'Release Brush holder', :name => 'create' %>
+          </div>
+      <% end %>
+    <% end %>

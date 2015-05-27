@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  partnumber: MyString
+  resin: MyString
+  color: MyString
+  supplier: MyString
+  recommendation: MyString
+  ul_number: MyString
+  drawing_norm: MyString
+  where_used_product: MyString
+  supplier_material_info: MyString
+  related_molders: MyString
+  release_status: MyString
+  uploaded_by_section: MyString
+  uploader_role: MyString
+  uploader_name: MyString
+  need_to_edit_partnumber: false
+  need_to_edit_resin: false
+  need_to_edit_color: false
+  need_to_edit_supplier: false
+  need_to_edit_recommendation: false
+  need_to_edit_ul_number: false
+  need_to_edit_drawing_norm: false
+  need_to_edit_where_used_product: false
+  need_to_edit_supplier_material_info: false
+  need_to_edit_related_molders: false
+
+two:
+  partnumber: MyString
+  resin: MyString
+  color: MyString
+  supplier: MyString
+  recommendation: MyString
+  ul_number: MyString
+  drawing_norm: MyString
+  where_used_product: MyString
+  supplier_material_info: MyString
+  related_molders: MyString
+  release_status: MyString
+  uploaded_by_section: MyString
+  uploader_role: MyString
+  uploader_name: MyString
+  need_to_edit_partnumber: false
+  need_to_edit_resin: false
+  need_to_edit_color: false
+  need_to_edit_supplier: false
+  need_to_edit_recommendation: false
+  need_to_edit_ul_number: false
+  need_to_edit_drawing_norm: false
+  need_to_edit_where_used_product: false
+  need_to_edit_supplier_material_info: false
+  need_to_edit_related_molders: false

@@ -1,0 +1,2 @@
+module PlasticMaterialsHelper
+end

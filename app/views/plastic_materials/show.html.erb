@@ -1,0 +1,85 @@
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+ <%= part_status(@plastic_material) %>
+<p>
+  <strong>Partnumber:</strong>
+  <%= @plastic_material.partnumber %>
+</p>
+
+<p>
+  <strong>Resin:</strong>
+  <%= @plastic_material.resin %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @plastic_material.color %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @plastic_material.supplier %>
+</p>
+
+<p>
+  <strong>Recommendation:</strong>
+  <%= @plastic_material.recommendation %>
+</p>
+
+<p>
+  <strong>Ul number:</strong>
+  <%= @plastic_material.ul_number %>
+</p>
+
+<p>
+  <strong>Drawing norm:</strong>
+  <%= @plastic_material.drawing_norm %>
+</p>
+
+<p>
+  <strong>Where used product:</strong>
+  <%= @plastic_material.where_used_product %>
+</p>
+
+<p>
+  <strong>Where used plant:</strong>
+  <%= @plastic_material.where_used_plant %>
+</p>
+
+
+<p>
+  <strong>Supplier material info:</strong>
+  <%= @plastic_material.supplier_material_info %>
+</p>
+
+<p>
+  <strong>Related molders:</strong>
+  <%= @plastic_material.related_molders %>
+</p>
+
+<br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @plastic_material.reason %>
+  </p><br />
+
+  <p>
+    <b>Submitted by:</b>
+    <%= @plastic_material.uploader_name %>
+  </p>
+
+  <p>
+    <b>Created at:</b>
+    <%= @plastic_material.created_at %>
+  </p>
+
+  <p>
+    <b>Last updated at:</b>
+    <%= @plastic_material.updated_at %>
+  </p>
+<%= render 'shared/show_actions', :object => @plastic_material %>

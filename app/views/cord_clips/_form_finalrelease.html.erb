@@ -1,0 +1,81 @@
+<br />
+<h2>This part is waiting to get released!</h2>
+<br />
+
+<p>
+  <strong>Partnumber:</strong>
+  <%= @cord_clip.partnumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cord_clip.description %>
+</p>
+
+<p>
+  <strong>Cord clip type:</strong>
+  <%= @cord_clip.cord_clip_type %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @cord_clip.material %>
+</p>
+
+<p>
+  <strong>Max cord od:</strong>
+  <%= @cord_clip.max_cord_od %>
+</p>
+
+<p>
+  <strong>Drawing norm:</strong>
+  <%= @cord_clip.drawing_norm %>
+</p>
+
+<p>
+  <strong>Where used product:</strong>
+  <%= @cord_clip.where_used_product %>
+</p>
+
+<p>
+  <strong>Where used plant:</strong>
+  <%= @cord_clip.where_used_plant %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @cord_clip.remark %>
+</p><br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @cord_clip.reason %>
+  </p><br />
+
+  <% if session[:user_role] == "Sectionhead" && @cord_clip.uploader_role == "Normal" && @cord_clip.release_status == "approved draft" && @cord_clip.uploaded_by_section == session[:user_section] %> 
+
+    <%= form_for(@cord_clip) do |f| %>
+        <% if @cord_clip.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@cord_clip.errors.count, "error") %> prohibited this cord_clip from being saved:</h2>
+
+            <ul>
+            <% @cord_clip.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+          <div class="field">
+              <%= f.label :Status? %><br />
+              <%= f.text_field :release_status, :value => "released", :readonly => true %>
+          </div>
+          
+          <br />
+
+          <div class="actions">
+            <%= f.submit 'Release Cord clip', :name => 'create' %>
+          </div>
+      <% end %>
+    <% end %>

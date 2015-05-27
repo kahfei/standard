@@ -1,0 +1,21 @@
+<% if editable?(object) %>
+  <%= link_to 'Edit', edit_polymorphic_path(object), :method => :get, class: "btn btn-default" %>
+<% end %>
+<% if correctable?(object) %>
+  <%= link_to 'Make Correction', polymorphic_path(object, :action => 'correct'), :method => :get, class: "btn btn-default" %>
+<% end %>
+<% if approvable?(object) %>
+    <%= link_to 'Need Editing', polymorphic_path(object, :action => 'needs_editing'), :method => :get, class: "btn btn-default" %>
+    <%= link_to 'Approve', polymorphic_path(object, :action => 'approve'), :method => :patch, data: {confirm: "please confirm to approve this part"}, class: "btn btn-default" %>
+<% end %>
+<% if releasable?(object) %>
+  <%= link_to 'Release draft', polymorphic_path(object, :action => 'release'), :method => :patch, data: {confirm: "please confirm to release this part"}, class: "btn btn-default" %>
+<% end %>
+<% if blockable?(object) %>
+  <%= link_to 'Block part', polymorphic_path(object, :action => 'block'), :method => :patch, data: {confirm: "Are you sure to block this part?"}, class: "btn btn-default"  %>
+<% end %>
+<% if unblockable?(object) %>
+  <%= link_to 'Unblock part', polymorphic_path(object, :action => 'unblock'), :method => :patch, data: {confirm: "Are you sure to unblock this part?"}, class: "btn btn-default"  %>
+<% end %>
+
+

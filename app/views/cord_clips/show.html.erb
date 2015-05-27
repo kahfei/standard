@@ -1,0 +1,74 @@
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+
+ <%= part_status(@cord_clip) %>
+
+<p>
+  <strong>Partnumber:</strong>
+  <%= @cord_clip.partnumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cord_clip.description %>
+</p>
+
+<p>
+  <strong>Cord clip type:</strong>
+  <%= @cord_clip.cord_clip_type %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @cord_clip.material %>
+</p>
+
+<p>
+  <strong>Max cord od:</strong>
+  <%= @cord_clip.max_cord_od %>
+</p>
+
+<p>
+  <strong>Drawing norm:</strong>
+  <%= @cord_clip.drawing_norm %>
+</p>
+
+<p>
+  <strong>Where used product:</strong>
+  <%= @cord_clip.where_used_product %>
+</p>
+
+<p>
+  <strong>Where used plant:</strong>
+  <%= @cord_clip.where_used_plant %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @cord_clip.remark %>
+</p><br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @cord_clip.reason %>
+  </p><br />
+
+  <p>
+    <b>Submitted by:</b>
+    <%= @cord_clip.uploader_name %>
+  </p>
+
+  <p>
+    <b>Created at:</b>
+    <%= @cord_clip.created_at %>
+  </p>
+
+  <p>
+    <b>Last updated at:</b>
+    <%= @cord_clip.updated_at %>
+  </p>
+<%= render 'shared/show_actions', :object => @cord_clip %>

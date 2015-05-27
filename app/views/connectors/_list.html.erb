@@ -1,0 +1,43 @@
+<div id="filterrific_results" %>
+<div><%= page_entries_info connectors %></div>
+
+<table class="table table-hover">
+  <tr class="active">
+    <th class="text-center">Partnumber</th>
+    <th class="text-center">Status</th>
+    <th class="text-center">Description</th>
+    <th class="text-center">Connector type</th>
+    <th class="text-center">Drawing norm</th>
+    <th class="text-center">H X W</th>
+    <th class="text-center">Supplier</th>
+    <th class="text-center">Where used product</th>
+    <th class="text-center">Where used plant</th>
+    <th class="text-center">Reason</th>
+    <th></th>
+  </tr>
+
+<% connectors.each do |connector| %>
+  <% if connector.release_status == "needs editing" && connector.uploader_name == session[:user_name] %>
+    <tr class="danger">
+  <% elsif connector.release_status == "pending" && session[:user_role] == "Sectionhead" && connector.uploader_role == "Normal" && connector.uploaded_by_section == session[:user_section] || session[:user_role] == "Departmenthead" && connector.uploader_role == "Sectionhead" && connector.release_status == "pending" %>
+    <tr class="warning">
+  <% elsif connector.release_status == "pending" || connector.release_status == "needs editing" %>
+    <tr class="pending_parts">
+  <% else %>
+    <tr>
+  <% end %>
+        <td><%= link_to "#{connector.partnumber}", connector, method: :get %></td>
+        <td><%= connector.release_status %></td>
+         <td><%= connector.description %></td>
+        <td><%= connector.connector_type %></td>
+        <td><%= connector.drawing_norm %></td>
+        <td><%= connector.h_x_w %></td>
+        <td><%= connector.supplier %></td>
+        <td><%= connector.where_used_product %></td>
+        <td><%= connector.where_used_plant %></td>
+        <td><%= connector.reason %></td>
+    </tr>
+<% end %>
+</table>
+<%= will_paginate connectors %>
+</div>

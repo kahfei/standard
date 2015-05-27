@@ -1,0 +1,69 @@
+<%= form_for(@grease) do |f| %>
+  <% if @grease.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@grease.errors.count, "error") %> prohibited this grease from being saved:</h2>
+
+      <ul>
+      <% @grease.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="field">
+      <%= f.label :partnumber %><br />
+      <%= f.text_field :partnumber %>
+    </div>
+    <div class="field">
+      <%= f.label :description %><br />
+      <%= f.text_field :description %>
+    </div>
+    <div class="field">
+      <%= f.label :grease_type %><br />
+      <%= f.text_field :grease_type %>
+    </div>
+    <div class="field">
+      <%= f.label :lubricated_location %><br />
+      <%= f.text_field :lubricated_location %>
+    </div>
+    <div class="field">
+      <%= f.label :drawing_norm %><br />
+      <%= f.text_field :drawing_norm %>
+    </div>
+    <div class="field">
+      <%= f.label :supplier %><br />
+      <%= f.text_field :supplier %>
+    </div>
+    <div class="field">
+      <%= f.label :where_used_product %><br />
+      <%= f.text_field :where_used_product %>
+    </div>
+    <div class="field">
+      <%= f.label :where_used_plant %><br />
+      <%= f.text_field :where_used_plant %>
+    </div>
+    <br />
+  <div class="field">
+    <%= f.label :reason_for_submission? %><br />
+    <%= f.text_field :reason %>
+  </div>   
+  <br />
+
+  <% if session[:user_role] == "Normal" && @grease.uploader_name == nil || session[:user_role] == "Sectionhead" && @grease.uploader_name == nil %>
+      <div class="field">
+        <%= f.label :release_status %><br />
+        <%= f.text_field :release_status, :value => "pending", :readonly => true %>
+      </div>
+  <% end %>
+    
+  <% if @grease.uploader_name != session[:user_name] && session[:user_role] != "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Submit Grease', :name => 'submit' %>
+    </div>
+  <% elsif @grease.uploader_name == session[:user_name] || session[:user_role] == "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Update Grease', :name => 'create' %>
+    </div>
+  <% end %>
+<% end %>

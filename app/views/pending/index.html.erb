@@ -1,0 +1,43 @@
+<div class="row">
+	<div class="col-sm-3">
+		<div class="list-group">
+		  <li class="list-group-item list-group-item-danger "><strong><span class="glyphicon glyphicon-th-list"></span> Part pending your action</strong></li>
+		  <% if is_section_head? %>
+			  <a class="list-group-item" data-toggle="collapse" href="#collapsePending" aria-expanded="false" aria-controls="collapsePending">pending
+			  	<span class="badge"><%= @pending_objs_from_same_section.flatten.count %></span>
+			  </a>
+			  <a class="list-group-item" data-toggle="collapse" href="#collapseApproveddraft" aria-expanded="false" aria-controls="collapseApproveddraf">approved draft
+			    <span class="badge"><%= @approved_objs_from_same_section.flatten.count %></span>
+			  </a>
+		  <% elsif is_department_head? %>
+			  <a class="list-group-item" data-toggle="collapse" href="#collapsePending" aria-expanded="false" aria-controls="collapsePending">pending
+			  	<span class="badge"><%= @pending_objs_from_section_head.flatten.count %></span>
+			  </a>
+			  <a class="list-group-item" data-toggle="collapse" href="#collapseApproveddraft" aria-expanded="false" aria-controls="collapseApproveddraf">approved draft
+			    <span class="badge"><%= @approved_objs_from_section_head.flatten.count %></span>
+			  </a>
+		  <% end %>
+		  <a class="list-group-item" data-toggle="collapse" href="#collapseNeedediting" aria-expanded="false" aria-controls="collapseNeedediting">
+		  needs editing
+		  <span class="badge"><%= @need_edit_objs.flatten.count %></span>
+		  </a>
+		</div>
+	</div>
+	<div class="col-sm-9">
+		<div class="pending-list-heading row">
+			<div class="col-sm-3"><h4>partnumber</h4></div>
+			<div class="col-sm-3"><h4>status</h4></div>
+			<div class="col-sm-3"><h4>category</h4></div>
+			<div class="col-sm-3"><h4>creator</h4></div>
+		</div>
+		<div class="collapse" id="collapsePending">
+		  <%= render 'pending/pending' %>
+		</div>
+		<div class="collapse" id="collapseApproveddraft">
+		  <%= render 'pending/approved_draft' %>
+		</div>
+		<div class="collapse" id="collapseNeedediting">
+		  <%= render 'pending/needs_editing' %>
+		</div>
+	</div>
+</div>

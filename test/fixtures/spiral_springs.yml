@@ -1,0 +1,65 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  partnumber: MyString
+  description: MyString
+  material_thickness: 9.99
+  material_width: 9.99
+  outer_dia: 9.99
+  torsion_arm_length: 9.99
+  torsion_arm_movable_distance: 9.99
+  initial_force: 9.99
+  final_force: 9.99
+  supplier: MyString
+  drawing_norm: MyString
+  where_used_product: MyString
+  where_used_plant: MyString
+  release_status: MyString
+  uploaded_by_section: MyString
+  uploader_role: MyString
+  uploader_name: MyString
+  need_to_edit_partnumber: false
+  need_to_edit_description: false
+  need_to_edit_material_thickness: false
+  need_to_edit_material_width: false
+  need_to_edit_outer_dia: false
+  need_to_edit_torsion_arm_length: false
+  need_to_edit_torsion_arm_movable_distance: false
+  need_to_edit_initial_force: false
+  need_to_edit_final_force: false
+  need_to_edit_supplier: false
+  need_to_edit_drawing_norm: false
+  need_to_edit_where_used_product: false
+  need_to_edit_where_used_plant: false
+
+two:
+  partnumber: MyString
+  description: MyString
+  material_thickness: 9.99
+  material_width: 9.99
+  outer_dia: 9.99
+  torsion_arm_length: 9.99
+  torsion_arm_movable_distance: 9.99
+  initial_force: 9.99
+  final_force: 9.99
+  supplier: MyString
+  drawing_norm: MyString
+  where_used_product: MyString
+  where_used_plant: MyString
+  release_status: MyString
+  uploaded_by_section: MyString
+  uploader_role: MyString
+  uploader_name: MyString
+  need_to_edit_partnumber: false
+  need_to_edit_description: false
+  need_to_edit_material_thickness: false
+  need_to_edit_material_width: false
+  need_to_edit_outer_dia: false
+  need_to_edit_torsion_arm_length: false
+  need_to_edit_torsion_arm_movable_distance: false
+  need_to_edit_initial_force: false
+  need_to_edit_final_force: false
+  need_to_edit_supplier: false
+  need_to_edit_drawing_norm: false
+  need_to_edit_where_used_product: false
+  need_to_edit_where_used_plant: false

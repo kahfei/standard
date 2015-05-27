@@ -1,0 +1,94 @@
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+ <%= part_status(@carbon_brush) %>
+
+<p>
+  <strong>Partnumber:</strong>
+  <%= @carbon_brush.partnumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @carbon_brush.description %>
+</p>
+
+<p>
+  <strong>Components:</strong>
+  <%= @carbon_brush.components %>
+</p>
+
+<p>
+  <strong>Cross sec:</strong>
+  <%= @carbon_brush.cross_sec %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @carbon_brush.length %>
+</p>
+
+<p>
+  <strong>Wire length or spring free length:</strong>
+  <%= @carbon_brush.wire_length_or_spring_free_length %>
+</p>
+
+<p>
+  <strong>Radius for commutator mm:</strong>
+  <%= @carbon_brush.radius_for_commutator_mm %>
+</p>
+
+<p>
+  <strong>Cut off:</strong>
+  <%= @carbon_brush.cut_off %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @carbon_brush.supplier %>
+</p>
+
+<p>
+  <strong>Drawing norm:</strong>
+  <%= @carbon_brush.drawing_norm %>
+</p>
+
+<p>
+  <strong>Where used product:</strong>
+  <%= @carbon_brush.where_used_product %>
+</p>
+
+<p>
+  <strong>Where used plant:</strong>
+  <%= @carbon_brush.where_used_plant %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @carbon_brush.remark %>
+</p><br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @carbon_brush.reason %>
+  </p><br />
+
+  <p>
+    <b>Submitted by:</b>
+    <%= @carbon_brush.uploader_name %>
+  </p>
+
+  <p>
+    <b>Created at:</b>
+    <%= @carbon_brush.created_at %>
+  </p>
+
+  <p>
+    <b>Last updated at:</b>
+    <%= @carbon_brush.updated_at %>
+  </p>
+
+<%= render 'shared/show_actions', :object => @carbon_brush %>

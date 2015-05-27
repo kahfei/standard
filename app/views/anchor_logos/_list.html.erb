@@ -1,0 +1,53 @@
+<div id="filterrific_results" %>
+<div><%= page_entries_info anchor_logos %></div>
+
+<table class="table table-hover">
+  <tr class="active">
+    <th class="text-center">Partnumber</th>
+    <th class="text-center">Status</th>
+    <th class="text-center">Anchor Logo Diameter</th>
+    <th class="text-center">Anchor Logo Supplier</th>
+    <th class="text-center">Housing Partnumber</th>
+    <th class="text-center">Housing Supplier</th>
+    <th class="text-center">Bosch Logo Partnumber</th>
+    <th class="text-center">Bosch Logo Supplier</th>
+    <th class="text-center">Where used product</th>
+    <th class="text-center">Where used plant</th>
+    <th class="text-center">Remark</th>
+    <th class="text-center">Reason</th>
+    <th></th>
+    
+    <% if session[:user_role] == "Superadmin" %>
+        <th></th>
+        <th></th>
+    <% end %>
+
+  </tr>
+
+<% anchor_logos.each do |anchor_logo| %>
+  <% if anchor_logo.release_status == "needs editing" && anchor_logo.uploader_name == session[:user_name] %>
+    <tr class="danger">
+  <% elsif anchor_logo.release_status == "pending" && session[:user_role] == "Sectionhead" && anchor_logo.uploader_role == "Normal" && anchor_logo.uploaded_by_section == session[:user_section] || session[:user_role] == "Departmenthead" && anchor_logo.uploader_role == "Sectionhead" && anchor_logo.release_status == "pending" %>
+    <tr class="warning">
+  <% elsif anchor_logo.release_status == "pending" || anchor_logo.release_status == "needs editing" %>
+    <tr class="pending_parts">
+  <% else %>
+    <tr>
+  <% end %>
+        <td><%= link_to "#{anchor_logo.partnumber}", anchor_logo, method: :get %></td>
+        <td><%= anchor_logo.release_status %></td>
+        <td><%= anchor_logo.anchor_logo_diameter %></td>
+        <td><%= anchor_logo.anchor_logo_supplier %></td>            
+        <td><%= anchor_logo.housing_partnumber %></td>
+        <td><%= anchor_logo.housing_supplier %></td>
+        <td><%= anchor_logo.bosch_logo_partnumber %></td>
+        <td><%= anchor_logo.bosch_logo_supplier %></td>
+        <td><%= anchor_logo.where_used_product %></td>
+        <td><%= anchor_logo.where_used_plant %></td> 
+        <td><%= anchor_logo.remark %></td>       
+        <td><%= anchor_logo.reason %></td>
+    </tr>
+<% end %>
+</table>
+<%= will_paginate anchor_logos %>
+</div>

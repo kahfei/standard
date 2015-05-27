@@ -1,0 +1,13 @@
+<h1>Editing user</h1>
+
+<%= @user_from_session %>
+<% if session[:user_id] == @user.id || session[:user_role] == "administrator" %>
+	<p>sui</p>
+	<%= render 'form' %>
+<% else %>
+	<p>boh sui</p>
+<% end %>
+
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>

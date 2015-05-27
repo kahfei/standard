@@ -1,0 +1,77 @@
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+
+ <%= part_status(@anchor_logo) %>
+<p>
+  <b>Partnumber:</b>
+  <%= @anchor_logo.partnumber %>
+</p>
+<p>
+  <b>Anchor Logo Diameter:</b>
+  <%= @anchor_logo.anchor_logo_diameter %>
+</p>
+<p>
+  <b>Anchor Logo Supplier:</b>
+  <%= @anchor_logo.anchor_logo_supplier %>
+</p>
+<p>
+  <b>Housing Partnumber:</b>
+  <%= @anchor_logo.housing_partnumber %>
+</p>
+<p>
+  <b>Housing Supplier:</b>
+  <%= @anchor_logo.housing_supplier %>
+</p>
+
+<p>
+  <b>Bosch Logo Partnumber:</b>
+  <%= @anchor_logo.bosch_logo_partnumber %>
+</p>
+
+<p>
+  <b>Bosch Logo Supplier:</b>
+  <%= @anchor_logo.bosch_logo_supplier %>
+</p>
+
+<p>
+  <b>Where used product:</b>
+  <%= @anchor_logo.where_used_product %>
+</p>
+
+<p>
+  <b>Where used plant:</b>
+  <%= @anchor_logo.where_used_plant %>
+</p><br />
+
+<p>
+  <b>Remark:</b>
+  <%= @anchor_logo.remark %>
+</p><br />
+
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @anchor_logo.reason %>
+  </p><br />
+
+<p>
+    <b>Submitted by:</b>
+    <%= @anchor_logo.uploader_name %>
+  </p>
+
+  <p>
+    <b>Created at:</b>
+    <%= @anchor_logo.created_at %>
+  </p>
+
+  <p>
+    <b>Last updated at:</b>
+    <%= @anchor_logo.updated_at %>
+  </p>
+
+
+<%= render 'shared/show_actions', :object => @anchor_logo %>

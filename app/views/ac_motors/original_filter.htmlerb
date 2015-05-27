@@ -1,0 +1,116 @@
+
+<%= form_for_filterrific @filterrific do |f| %>
+    <div class="row">
+        <div class="col-md-4">
+            <span class="glyphicon glyphicon-refresh"></span>
+            <%= link_to('Reset filters', reset_filterrific_url, ) %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">Armature Part Number <%= f.select(:with_arm_part_no, @filterrific.select_options[:with_arm_part_no], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Motor Size <%= f.select(:with_motor_size, @filterrific.select_options[:with_motor_size], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Armature Drawing <%= f.select(:with_armature_drw, @filterrific.select_options[:with_armature_drw], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Field Partnumber<%= f.select(:with_field_part_no, @filterrific.select_options[:with_field_part_no], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Field Drawing <%= f.select(:with_field_drw, @filterrific.select_options[:with_field_drw], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Voltage <%= f.select(:with_voltage, @filterrific.select_options[:with_voltage], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Power <%= f.select(:with_power, @filterrific.select_options[:with_power], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Amps Rating <%= f.select(:with_amps_rating, @filterrific.select_options[:with_amps_rating], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Output RPM <%= f.select(:with_output_rpm, @filterrific.select_options[:with_output_rpm], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Rotation <%= f.select(:with_rotation, @filterrific.select_options[:with_rotation], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">No Load RPM Motor<%= f.select(:with_no_load_rpm_motor, @filterrific.select_options[:with_no_load_rpm_motor], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Gear Ratio <%= f.select(:with_gear_ratio, @filterrific.select_options[:with_gear_ratio], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Armature Wire Diameter <%= f.select(:with_arm_wire_dia, @filterrific.select_options[:with_arm_wire_dia], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Field Wire Diameter <%= f.select(:with_field_wire_dia, @filterrific.select_options[:with_field_wire_dia], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Winding Type <%= f.select(:with_winding_type, @filterrific.select_options[:with_winding_type], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Armature Resistance <%= f.select(:with_arm_resistance, @filterrific.select_options[:with_arm_resistance], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Displace Angle <%= f.select(:with_displace_angle, @filterrific.select_options[:with_displace_angle], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Armature No of Turns <%= f.select(:with_arm_no_of_turns, @filterrific.select_options[:with_arm_no_of_turns], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Field No of Turns <%= f.select(:with_field_no_of_turns, @filterrific.select_options[:with_field_no_of_turns], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Field Resistance <%= f.select(:with_field_resistance, @filterrific.select_options[:with_field_resistance], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Field with drawing <%= f.select(:with_field_wind_drw, @filterrific.select_options[:with_field_wind_drw], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Armature Package <%= f.select(:with_arm_package, @filterrific.select_options[:with_arm_package], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Shaft Partnumber <%= f.select(:with_shaft_part_no, @filterrific.select_options[:with_shaft_part_no], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Shaft Drawing <%= f.select(:with_shaft_drw, @filterrific.select_options[:with_shaft_drw], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Armature Stack <%= f.select(:with_arm_stack, @filterrific.select_options[:with_arm_stack], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Armature Laminate <%= f.select(:with_arm_laminate, @filterrific.select_options[:with_arm_laminate], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Field Stack <%= f.select(:with_field_stack, @filterrific.select_options[:with_field_stack], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Field Stack Opt <%= f.select(:with_field_stack_opt, @filterrific.select_options[:with_field_stack_opt], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Armature End Laminate <%= f.select(:with_arm_end_lami, @filterrific.select_options[:with_arm_end_lami], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Molding Compound <%= f.select(:with_molding_comp, @filterrific.select_options[:with_molding_comp], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Commutator <%= f.select(:with_commutator, @filterrific.select_options[:with_commutator], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Armature Copper Wire <%= f.select(:with_arm_copper_wire, @filterrific.select_options[:with_arm_copper_wire], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Armature Wire Drawing <%= f.select(:with_arm_wire_drw, @filterrific.select_options[:with_arm_wire_drw], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Field Copper Wire <%= f.select(:with_field_copper_wire, @filterrific.select_options[:with_field_copper_wire], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Armature Fan <%= f.select(:with_arm_fan, @filterrific.select_options[:with_arm_fan], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Insulating Tube <%= f.select(:with_insulating_tube, @filterrific.select_options[:with_insulating_tube], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Insulator <%= f.select(:with_insulator, @filterrific.select_options[:with_insulator], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Hard Paper Tube <%= f.select(:with_hard_paper_tube, @filterrific.select_options[:with_hard_paper_tube], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Slot Insulation <%= f.select(:with_slot_insulation, @filterrific.select_options[:with_slot_insulation], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Slot Wedge <%= f.select(:with_slot_wedge, @filterrific.select_options[:with_slot_wedge], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Pressboard <%= f.select(:with_pressboard, @filterrific.select_options[:with_pressboard], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Field insulation paper <%= f.select(:with_field_insulation_paper, @filterrific.select_options[:with_field_insulation_paper], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Connection Plate <%= f.select(:with_connection_plate, @filterrific.select_options[:with_connection_plate], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Connection Plate Opt <%= f.select(:with_conn_plate_opt, @filterrific.select_options[:with_conn_plate_opt], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">End Plate <%= f.select(:with_end_plate, @filterrific.select_options[:with_end_plate], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">End plate Opt <%= f.select(:with_end_plate_opt, @filterrific.select_options[:with_end_plate_opt], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Polyester Resin <%= f.select(:with_polyester_resin, @filterrific.select_options[:with_polyester_resin], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Resin Hardener <%= f.select(:with_resin_hardener, @filterrific.select_options[:with_resin_hardener], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Hardener Adhesive <%= f.select(:with_hardener_adhesive, @filterrific.select_options[:with_hardener_adhesive], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Impregnating Resin <%= f.select(:with_impregnating_resin, @filterrific.select_options[:with_impregnating_resin], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Impregnating Hardener <%= f.select(:with_impreg_hardener, @filterrific.select_options[:with_impreg_hardener], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Receptacle 01 <%= f.select(:with_receptacle_01, @filterrific.select_options[:with_receptacle_01], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Receptacle 02 <%= f.select(:with_receptacle_02, @filterrific.select_options[:with_receptacle_02], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Impregnating Resin <%= f.select(:with_field_impregn_resin, @filterrific.select_options[:with_field_impregn_resin], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Field Resin Hard <%= f.select(:with_field_resin_hard, @filterrific.select_options[:with_field_resin_hard], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Filed Coating <%= f.select(:with_filed_coating, @filterrific.select_options[:with_filed_coating], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Field Heat Sink <%= f.select(:with_field_heat_sink, @filterrific.select_options[:with_field_heat_sink], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Field Pressboard <%= f.select(:with_field_pressboard, @filterrific.select_options[:with_field_pressboard], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Where Used Product <%= f.select(:with_where_used_product, @filterrific.select_options[:with_where_used_product], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Where Used Plant <%= f.select(:with_where_used_plant, @filterrific.select_options[:with_where_used_plant], { include_blank: ' - Any - ' }) %></div>
+    </div>
+     <div class="row">
+        <div class="col-md-4">Remark <%= f.select(:with_remark, @filterrific.select_options[:with_remark], { include_blank: ' - Any - ' }) %></div>
+        <div class="col-md-4">Reason <%= f.select(:with_reason, @filterrific.select_options[:with_reason], { include_blank: ' - Any - ' }) %></div>
+        
+        <%= render_filterrific_spinner %>
+    </div>
+
+<% end %>

@@ -1,0 +1,92 @@
+<%= form_for(@spiral_spring) do |f| %>
+  <% if @spiral_spring.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@spiral_spring.errors.count, "error") %> prohibited this spiral_spring from being saved:</h2>
+
+      <ul>
+      <% @spiral_spring.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :partnumber %><br>
+    <%= f.text_field :partnumber %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :material_thickness %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :material_thickness %>
+  </div>
+  <div class="field">
+    <%= f.label :material_width %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :material_width %>
+  </div>
+  <div class="field">
+    <%= f.label :outer_dia %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :outer_dia %>
+  </div>
+  <div class="field">
+    <%= f.label :torsion_arm_length %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :torsion_arm_length %>
+  </div>
+  <div class="field">
+    <%= f.label :torsion_arm_movable_distance %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :torsion_arm_movable_distance %>
+  </div>
+  <div class="field">
+    <%= f.label :initial_force %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :initial_force %>
+  </div>
+  <div class="field">
+    <%= f.label :final_force %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :final_force %>
+  </div>
+  <div class="field">
+    <%= f.label :supplier %><br>
+    <%= f.text_field :supplier %>
+  </div>
+  <div class="field">
+    <%= f.label :drawing_norm %><br>
+    <%= f.text_field :drawing_norm %>
+  </div>
+  <div class="field">
+    <%= f.label :where_used_product %><br>
+    <%= f.text_field :where_used_product %>
+  </div>
+  <div class="field">
+    <%= f.label :where_used_plant %><br>
+    <%= f.text_field :where_used_plant %>
+  </div>
+  <br />
+  <div class="field">
+    <%= f.label :reason_for_submission? %><br />
+    <%= f.text_field :reason %>
+  </div>   
+  <br />
+  
+
+  <% if session[:user_role] == "Normal" && @spiral_spring.uploader_name == nil || session[:user_role] == "Sectionhead" && @spiral_spring.uploader_name == nil %>
+      <div class="field">
+        <%= f.label :release_status %><br />
+        <%= f.text_field :release_status, :value => "pending", :readonly => true %>
+      </div>
+  <% end %>
+    
+  <% if @spiral_spring.uploader_name != session[:user_name] && session[:user_role] != "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Submit Spiral spring', :name => 'submit' %>
+    </div>
+  <% end %>
+
+  <% if @spiral_spring.uploader_name == session[:user_name] || session[:user_role] == "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Update Spiral spring', :name => 'create' %>
+    </div>
+  <% end %>
+<% end %>

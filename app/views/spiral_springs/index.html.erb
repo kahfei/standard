@@ -1,0 +1,43 @@
+<h1>Listing spiral springs</h1>
+
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+<div class="row">
+  <%= form_for_filterrific @filterrific do |f| %>
+     <span class="glyphicon glyphicon-search"></span> <%= f.text_field(:search_query, class: 'filterrific-periodically-observed') %>
+     <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    <span class="glyphicon glyphicon-filter"></span>
+  </button>
+  <% end %>
+</div>
+
+<div class="row">
+<div class="collapse" id="collapseExample">
+  <%= render(
+              partial: 'shared/filter',
+              locals: { obj: SpiralSpring }) 
+  %>
+</div>
+
+
+<%= render(
+    partial: 'spiral_springs/list', 
+    locals: { spiral_springs: @spiral_springs }) 
+%>
+<br />
+
+<% if session[:user_role] == "Sectionhead" %>
+  <%= button_to 'New Spiral spring', new_spiral_spring_path, :method => :get %><br />
+<% end %>
+
+<% if session[:user_role] == "Normal" %>
+  <%= button_to 'New Spiral spring', new_spiral_spring_path, :method => :get %><br />
+<% end %>
+
+<% if session[:user_role] == "Superadmin" %>
+    <p><%= link_to ">>Import Spiral springs via EXCEL or CSV<<", new_spiral_spring_import_path %></p>
+<% end %>

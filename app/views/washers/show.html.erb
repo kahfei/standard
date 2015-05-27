@@ -1,0 +1,90 @@
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+
+ <%= part_status(@washer) %>
+<p>
+  <strong>Partnumber:</strong>
+  <%= @washer.partnumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @washer.description %>
+</p>
+
+<p>
+  <strong>Washer type:</strong>
+  <%= @washer.washer_type %>
+</p>
+
+<p>
+  <strong>Inner diameter:</strong>
+  <%= @washer.inner_diameter %>
+</p>
+
+<p>
+  <strong>Outer diameter:</strong>
+  <%= @washer.outer_diameter %>
+</p>
+
+<p>
+  <strong>Thickness:</strong>
+  <%= @washer.thickness %>
+</p>
+
+<p>
+  <strong>Coating:</strong>
+  <%= @washer.coating %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @washer.material %>
+</p>
+
+<p>
+  <strong>Drawing norm:</strong>
+  <%= @washer.drawing_norm %>
+</p>
+
+<p>
+  <strong>Where used product:</strong>
+  <%= @washer.where_used_product %>
+</p>
+
+<p>
+  <strong>Where used plant:</strong>
+  <%= @washer.where_used_plant %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @washer.remark %>
+</p>
+
+<br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @washer.reason %>
+  </p><br />
+
+<p>
+    <b>Submitted by:</b>
+    <%= @washer.uploader_name %>
+  </p>
+
+  <p>
+    <b>Created at:</b>
+    <%= @washer.created_at %>
+  </p>
+
+  <p>
+    <b>Last updated at:</b>
+    <%= @washer.updated_at %>
+  </p>
+<%= render 'shared/show_actions', :object => @washer %>

@@ -1,0 +1,46 @@
+<div id="filterrific_results" %>
+<div><%= page_entries_info capacitors %></div>
+
+<table class="table table-hover">
+  <tr class="active">
+    <th class="text-center">Partnumber</th>
+    <th class="text-center">Status</th>
+    <th class="text-center">Description</th>
+    <th class="text-center">Capacitor type</th>
+    <th class="text-center">Capacity</th>
+    <th class="text-center">Feet</th>
+    <th class="text-center">Capacitor class</th>
+    <th class="text-center">Drawing norm</th>
+    <th class="text-center">Where used product</th>
+    <th class="text-center">Where used plant</th>
+    <th class="text-center">Remark</th>
+    <th class="text-center">Reason</th>
+ </tr>
+
+<% capacitors.each do |capacitor| %>
+  <% if capacitor.release_status == "needs editing" && capacitor.uploader_name == session[:user_name] %>
+    <tr class="danger">
+  <% elsif capacitor.release_status == "pending" && session[:user_role] == "Sectionhead" && capacitor.uploader_role == "Normal" && capacitor.uploaded_by_section == session[:user_section] || session[:user_role] == "Departmenthead" && capacitor.uploader_role == "Sectionhead" && capacitor.release_status == "pending" %>
+    <tr class="warning">
+  <% elsif capacitor.release_status == "pending" || capacitor.release_status == "needs editing" %>
+    <tr class="pending_parts">
+  <% else %>
+    <tr>
+  <% end %>
+    <td><%= link_to "#{capacitor.partnumber}", capacitor, method: :get %></td>
+    <td><%= capacitor.release_status %></td>
+    <td><%= capacitor.description %></td>
+    <td><%= capacitor.capacitor_type %></td>
+    <td><%= capacitor.capacity %></td>
+    <td><%= capacitor.feet %></td>
+    <td><%= capacitor.capacitor_class %></td>
+    <td><%= capacitor.drawing_norm %></td>
+    <td><%= capacitor.where_used_product %></td>
+    <td><%= capacitor.where_used_plant %></td>
+    <td><%= capacitor.remark %></td>
+    <td><%= capacitor.reason %></td>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate capacitors %>
+</div>

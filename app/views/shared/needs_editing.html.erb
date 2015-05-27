@@ -1,0 +1,30 @@
+<div class="row">
+    <%= render 'shared/guide_to_response' %>
+    <% if @object.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@object.errors.count, "error") %> prohibited this ac motor from being saved:</h2>
+
+        <ul>
+        <% @object.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <%= form_for @object do |f| %>
+      <% editable_fields(@object).each do |editable_field| %>
+        <div class='form-group'> 
+          <div class = 'col-sm-3'>
+            <%= f.check_box editable_field[0] %>
+            <%= f.label editable_field[0].gsub("need_to_edit_","") %>
+          </div>
+            <%= f.text_field editable_field[0].gsub("need_to_edit_",""), :readonly => true %>
+        </div>
+      <% end %>
+        <div class="actions">
+          <%= f.submit 'Update', :name => 'to_needs_editing', class: 'btn btn-primary'  %>
+          <%= link_to 'Reject', @object, :method => :delete, data: { confirm: 'You hereby delete the whole draft. Confirm by pressing OK.' }, class: 'btn btn-primary' %>
+        </div>
+    <% end %>
+</div>
+    

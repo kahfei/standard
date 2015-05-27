@@ -1,0 +1,79 @@
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+
+ <%= part_status(@c_clip) %>
+<p>
+  <b>Partnumber:</b>
+  <%= @c_clip.partnumber %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @c_clip.description %>
+</p>
+
+<p>
+  <b>Clip type:</b>
+  <%= @c_clip.clip_type %>
+</p>
+
+<p>
+  <b>Norminal diameter:</b>
+  <%= @c_clip.norminal_diameter %>
+</p>
+
+<p>
+  <b>Thickness:</b>
+  <%= @c_clip.thickness %>
+</p>
+
+<p>
+  <b>Coating:</b>
+  <%= @c_clip.coating %>
+</p>
+
+<p>
+  <b>Drawing norm:</b>
+  <%= @c_clip.drawing_norm %>
+</p>
+
+<p>
+  <b>Where used product:</b>
+  <%= @c_clip.where_used_product %>
+</p>
+
+<p>
+  <b>Where used plant:</b>
+  <%= @c_clip.where_used_plant %>
+</p>
+
+<p>
+  <b>Remark:</b>
+  <%= @c_clip.remark %>
+</p><br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @c_clip.reason %>
+  </p><br />
+
+<p>
+    <b>Submitted by:</b>
+    <%= @c_clip.uploader_name %>
+  </p>
+
+  <p>
+    <b>Created at:</b>
+    <%= @c_clip.created_at %>
+  </p>
+
+  <p>
+    <b>Last updated at:</b>
+    <%= @c_clip.updated_at %>
+  </p>
+
+<%= render 'shared/show_actions', :object => @c_clip %>

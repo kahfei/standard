@@ -1,0 +1,78 @@
+<%= form_for(@copperwire) do |f| %>
+  <% if @copperwire.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@copperwire.errors.count, "error") %> prohibited this copperwire from being saved:</h2>
+
+      <ul>
+      <% @copperwire.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :partnumber %><br />
+    <%= f.text_field :partnumber %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :copperwire_type %><br />
+    <%= f.text_field :copperwire_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :self_bonded %><br />
+    <%= f.select :self_bonded, Copperwire::SELF_BONDED %>
+  </div>
+
+  <div class="field">
+    <%= f.label :diameter %><b> (You need to use a dot, for example: 0.53)</b><br />
+    <%= f.text_field :diameter %>
+  </div>
+  <div class="field">
+    <%= f.label :drawing_norm %><br />
+    <%= f.text_field :drawing_norm %>
+  </div>
+  <div class="field">
+    <%= f.label :supplier %><br />
+    <%= f.text_field :supplier %>
+  </div>
+  <div class="field">
+    <%= f.label :where_used_product %><br />
+    <%= f.text_field :where_used_product %>
+  </div>
+  <div class="field">
+    <%= f.label :where_used_plant %><br />
+    <%= f.text_field :where_used_plant %>
+  </div>
+  <br />
+  <div class="field">
+    <%= f.label :reason_for_submission? %><br />
+    <%= f.text_field :reason %>
+  </div>   
+  <br />
+  
+  <% if session[:user_role] == "Normal" && @copperwire.uploader_name == nil || session[:user_role] == "Sectionhead" && @copperwire.uploader_name == nil %>
+      <div class="field">
+        <%= f.label :release_status %><br />
+        <%= f.text_field :release_status, :value => "pending", :readonly => true %>
+      </div>
+  <% end %>
+    
+  <% if @copperwire.uploader_name != session[:user_name] && session[:user_role] != "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Submit Copperwire', :name => 'submit' %>
+    </div>
+  <% end %>
+
+  <% if @copperwire.uploader_name == session[:user_name] || session[:user_role] == "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Update Copperwire', :name => 'create' %>
+    </div>
+  <% end %>
+<% end %>

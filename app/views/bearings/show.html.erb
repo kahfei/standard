@@ -1,0 +1,110 @@
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+<% end %>
+<%= part_status(@bearing) %>
+
+
+  <p>
+    <b>Partnumber:</b>
+    <%= @bearing.partnumber %>
+  </p>
+
+  <p>
+    <b>Description:</b>
+    <%= @bearing.description %>
+  </p>
+
+  <p>
+    <b>I dia:</b>
+    <%= @bearing.i_dia %>
+  </p>
+
+  <p>
+    <b>O dia:</b>
+    <%= @bearing.o_dia %>
+  </p>
+
+  <p>
+    <b>Width:</b>
+    <%= @bearing.width %>
+  </p>
+
+  <p>
+    <b>Bearing type:</b>
+    <%= @bearing.bearing_type %>
+  </p>
+
+  <p>
+    <b>Bearing no:</b>
+    <%= @bearing.bearing_no %>
+  </p>
+
+  <p>
+    <b>Radial clearance um:</b>
+    <%= @bearing.radial_clearance_um %>
+  </p>
+
+  <p>
+    <b>Sealing:</b>
+    <%= @bearing.sealing %>
+  </p>
+
+  <p>
+    <b>Max speed rpm:</b>
+    <%= @bearing.max_speed_rpm %>
+  </p>
+
+  <p>
+    <b>Position within product:</b>
+    <%= @bearing.position_within_product %>
+  </p>
+
+  <p>
+    <b>Drawing norm:</b>
+    <%= @bearing.drawing_norm %>
+  </p>
+
+  <p>
+    <b>Where used product:</b>
+    <%= @bearing.where_used_product %>
+  </p>
+
+  <p>
+    <b>Where used plant:</b>
+    <%= @bearing.where_used_plant %>
+  </p>
+
+  <p>
+    <b>Supplier:</b>
+    <%= @bearing.supplier %>
+  </p>
+
+  <p>
+    <b>Remark:</b>
+    <%= @bearing.remark %>
+  </p>
+
+  <p>
+    <b>Reason for submission:</b>
+    <%= @bearing.reason %>
+  </p><br />
+
+  <p>
+    <b>Submitted by:</b>
+    <%= @bearing.uploader_name %>
+  </p>
+
+  <p>
+    <b>Created at:</b>
+    <%= @bearing.created_at %>
+  </p>
+
+  <p>
+    <b>Last updated at:</b>
+    <%= @bearing.updated_at %>
+  </p>
+
+
+<%= render 'shared/show_actions', :object => @bearing %>

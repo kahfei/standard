@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  housing_partnumber: MyString
+  housing_supplier: MyString
+  anchor_logo_diameter: 9.99
+  anchor_logo_partnumber: MyString
+  anchor_logo_supplier: MyString
+  bosch_logo_partnumber: MyString
+  bosch_logo_supplier: MyString
+  where_used_product: MyString
+  where_used_plant: MyString
+  remark: MyString
+  reason: MyString
+
+two:
+  housing_partnumber: MyString
+  housing_supplier: MyString
+  anchor_logo_diameter: 9.99
+  anchor_logo_partnumber: MyString
+  anchor_logo_supplier: MyString
+  bosch_logo_partnumber: MyString
+  bosch_logo_supplier: MyString
+  where_used_product: MyString
+  where_used_plant: MyString
+  remark: MyString
+  reason: MyString

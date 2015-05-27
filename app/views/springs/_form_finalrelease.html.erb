@@ -1,0 +1,158 @@
+<br />
+<h2>This part is waiting to get released!</h2>
+<br />
+
+<p>
+  <strong>Partnumber:</strong>
+  <%= @spring.partnumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @spring.description %>
+</p>
+
+<p>
+  <strong>Spring type:</strong>
+  <%= @spring.spring_type %>
+</p>
+
+<p>
+  <strong>Material dia:</strong>
+  <%= @spring.material_dia %>
+</p>
+
+<p>
+  <strong>Mean dia:</strong>
+  <%= @spring.mean_dia %>
+</p>
+
+<p>
+  <strong>Free length:</strong>
+  <%= @spring.free_length %>
+</p>
+
+<p>
+  <strong>No of active coils:</strong>
+  <%= @spring.no_of_active_coils %>
+</p>
+
+<p>
+  <strong>Solid length max:</strong>
+  <%= @spring.solid_length_max %>
+</p>
+
+<p>
+  <strong>Dimension f1:</strong>
+  <%= @spring.dimension_f1 %>
+</p>
+
+<p>
+  <strong>Dimension l1:</strong>
+  <%= @spring.dimension_l1 %>
+</p>
+
+<p>
+  <strong>Dimension f2:</strong>
+  <%= @spring.dimension_f2 %>
+</p>
+
+<p>
+  <strong>Dimension l2:</strong>
+  <%= @spring.dimension_l2 %>
+</p>
+
+<p>
+  <strong>Initial load nm:</strong>
+  <%= @spring.initial_load_nm %>
+</p>
+
+<p>
+  <strong>Final load nm:</strong>
+  <%= @spring.final_load_nm %>
+</p>
+
+<p>
+  <strong>Torque arm length:</strong>
+  <%= @spring.torque_arm_length %>
+</p>
+
+<p>
+  <strong>Hook length:</strong>
+  <%= @spring.hook_length %>
+</p>
+
+<p>
+  <strong>Hook arc radius:</strong>
+  <%= @spring.hook_arc_radius %>
+</p>
+
+<p>
+  <strong>Spring constant:</strong>
+  <%= @spring.spring_constant %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @spring.unit %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @spring.supplier %>
+</p>
+
+<p>
+  <strong>Drawing norm:</strong>
+  <%= @spring.drawing_norm %>
+</p>
+
+<p>
+  <strong>Where used product:</strong>
+  <%= @spring.where_used_product %>
+</p>
+
+<p>
+  <strong>Where used plant:</strong>
+  <%= @spring.where_used_plant %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @spring.remark %>
+</p>
+
+<br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @spring.reason %>
+  </p><br />
+
+  <% if session[:user_role] == "Sectionhead" && @spring.uploader_role == "Normal" && @spring.release_status == "approved draft" && @spring.uploaded_by_section == session[:user_section] %> 
+
+    <%= form_for(@spring) do |f| %>
+        <% if @spring.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@spring.errors.count, "error") %> prohibited this spring from being saved:</h2>
+
+            <ul>
+            <% @spring.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+          <div class="field">
+              <%= f.label :Status? %><br />
+              <%= f.text_field :release_status, :value => "released", :readonly => true %>
+          </div>
+          
+          <br />
+
+          <div class="actions">
+            <%= f.submit 'Release Spring', :name => 'create' %>
+          </div>
+      <% end %>
+    <% end %>

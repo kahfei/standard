@@ -1,0 +1,4 @@
+<% js = escape_javascript(
+  render(partial: 'capacitors/list', locals: { capacitors: @capacitors })
+) %>
+$("#filterrific_results").html("<%= js %>");

@@ -1,0 +1,36 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+<table class="pretty">
+  <tr>
+    <th><%= sortable "partnumber","Part number" %></th>
+    <th><%= sortable "description","Description" %></th>
+    <th><%= sortable "grease_type", "Grease type" %></th>
+    <th><%= sortable "lubricated_location","Lubricated location" %></th>
+    <th><%= sortable "drawing_norm","Drawing norm" %></th>
+    <th><%= sortable "supplier","Supplier" %></th>
+	  <th><%= sortable "where_used_product","Where used product" %></th>
+    <th><%= sortable "where_used_product","Where used plant" %></th>
+  <% if session[:user_role] == "superadmin" || session[:user_role] == "approver" %>
+    <th><%= sortable "reason" %></th>
+    <th><%= sortable "release_status" %></th>
+	<% end %>
+  </tr>
+  <% @greases.each do |grease| %>
+<tr class="<%= cycle("odd","even") %>">
+    <td><%= link_to "#{grease.partnumber}", edit_grease_path(grease) %></td>
+    <td><%= grease.partnumber %></td>
+    <td><%= grease.description %></td>
+    <td><%= grease.grease_type %></td>
+	  <td><%= grease.lubricated_location %></td>
+    <td><%= grease.drawing_norm %></td>
+	  <td><%= grease.supplier %></td>
+	  <td><%= grease.where_used_product %></td>
+    <td><%= grease.where_used_plant %></td>
+    <td><%= grease.reason %></td>
+	<% if session[:user_role] == "administrator" %>
+		<td><%= grease.status %></td>
+	<% end %>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @greases %>

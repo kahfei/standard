@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<% if session[:user_role] != "Normal" || session[:user_id] == @user.id %>
+  <p>
+    <b>Name:</b>
+    <%= @user.name %>
+  </p>
+  <p>
+    <b>Fullname:</b>
+    <%= @user.fullname %>
+  </p>
+  <p>
+    <b>User Role:</b>
+    <%= @user.role %>
+  </p>
+
+  <p>
+    <b>Section:</b>
+    <%= @user.section %>
+  </p>
+    <b>Email:</b>
+    <%= @user.email %>
+  </p>
+  <p>
+    <b>Phone:</b>
+    <%= @user.phone %>
+  </p>
+  <p>
+    <b>Location:</b>
+    <%= @user.location %>
+  </p>
+<% end %>
+
+<%= button_to 'Back', users_path %>

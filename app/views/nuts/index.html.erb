@@ -1,0 +1,36 @@
+<h1>Listing nuts</h1>
+
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+<div class="row">
+  <%= form_for_filterrific @filterrific do |f| %>
+     <span class="glyphicon glyphicon-search"></span> <%= f.text_field(:search_query, class: 'filterrific-periodically-observed') %>
+     <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    <span class="glyphicon glyphicon-filter"></span>
+  </button>
+  <% end %>
+</div>
+
+<div class="row">
+<div class="collapse" id="collapseExample">
+  <%= render(
+              partial: 'shared/filter',
+              locals: { obj: Nut }) 
+  %>
+</div>
+<%= render(
+    partial: 'nuts/list', 
+    locals: { nuts: @nuts }) 
+%>
+
+<br />
+
+<% if is_section_head? || is_normal? %>
+  <%= button_to 'New Nut', new_nut_path, :method => :get, class: "btn btn-default" %>
+<% elsif is_superadmin? %>
+  <%= link_to "Mass Import",  new_nut_import_path, class: "btn btn-default" %>
+<% end %>

@@ -1,0 +1,79 @@
+<%= form_for(@nut) do |f| %>
+  <% if @nut.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nut.errors.count, "error") %> prohibited this nut from being saved:</h2>
+
+      <ul>
+      <% @nut.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :partnumber %><br>
+    <%= f.text_field :partnumber %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :nut_type %><br>
+    <%= f.text_field :nut_type %>
+  </div>
+  <div class="field">
+    <%= f.label :nut_size %><br>
+    <%= f.text_field :nut_size %>
+  </div>
+  <div class="field">
+    <%= f.label :width %><b> (You need to use a dot, for example: 0.53)</b><br>
+    <%= f.text_field :width %>
+  </div>
+  <div class="field">
+    <%= f.label :drawing_norm %><br>
+    <%= f.text_field :drawing_norm %>
+  </div>
+  <div class="field">
+    <%= f.label :coating %><br>
+    <%= f.text_field :coating %>
+  </div>
+  <div class="field">
+    <%= f.label :where_used_product %><br>
+    <%= f.text_field :where_used_product %>
+  </div>
+  <div class="field">
+    <%= f.label :where_used_plant %><br>
+    <%= f.text_field :where_used_plant %>
+  </div>
+  <div class="field">
+    <%= f.label :remark %><br>
+    <%= f.text_field :remark %>
+  </div>
+  <br />
+  <div class="field">
+    <%= f.label :reason_for_submission? %><br />
+    <%= f.text_field :reason %>
+  </div>   
+  <br />
+
+  <% if session[:user_role] == "Normal" && @nut.uploader_name == nil || session[:user_role] == "Sectionhead" && @nut.uploader_name == nil %>
+      <div class="field">
+        <%= f.label :release_status %><br />
+        <%= f.text_field :release_status, :value => "pending", :readonly => true %>
+      </div>
+  <% end %>
+    
+  <% if @nut.uploader_name != session[:user_name] && session[:user_role] != "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Submit Nut', :name => 'submit' %>
+    </div>
+  <% end %>
+
+  <% if @nut.uploader_name == session[:user_name] || session[:user_role] == "Superadmin" %>
+    <div class="actions">
+      <%= f.submit 'Update Nut', :name => 'create' %>
+    </div>
+  <% end %>
+<% end %>

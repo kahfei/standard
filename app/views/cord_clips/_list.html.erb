@@ -1,0 +1,48 @@
+<div id="filterrific_results" %>
+<div><%= page_entries_info cord_clips %></div>
+
+<table class="table table-hover">
+
+  <tr class="active">
+      <th class="text-center">Partnumber</th>
+      <th class="text-center">Status</th>
+      <th class="text-center">Description</th>
+      <th class="text-center">Cord clip type</th>
+      <th class="text-center">Material</th>
+      <th class="text-center">Max cord od</th>
+      <th class="text-center">Drawing norm</th>
+      <th class="text-center">Where used product</th>
+      <th class="text-center">Where used plant</th>
+      <th class="text-center">Remark</th>
+      <th class="text-center">Reason</th>
+    </tr>
+
+
+  <tbody>
+    <% cord_clips.each do |cord_clip| %>
+      <% if cord_clip.release_status == "needs editing" && cord_clip.uploader_name == session[:user_name] %>
+        <tr class="danger">
+      <% elsif cord_clip.release_status == "pending" && session[:user_role] == "Sectionhead" && cord_clip.uploader_role == "Normal" && cord_clip.uploaded_by_section == session[:user_section] || session[:user_role] == "Departmenthead" && cord_clip.uploader_role == "Sectionhead" && cord_clip.release_status == "pending" %>
+        <tr class="warning">
+      <% elsif cord_clip.release_status == "pending" || cord_clip.release_status == "needs editing" %>
+        <tr class="pending_parts">
+      <% else %>
+        <tr>
+      <% end %>
+        <td><%= link_to "#{cord_clip.partnumber}", cord_clip, method: :get %></td>
+        <td><%= cord_clip.release_status %></td>
+        <td><%= cord_clip.description %></td>
+        <td><%= cord_clip.cord_clip_type %></td>
+        <td><%= cord_clip.material %></td>
+        <td><%= cord_clip.max_cord_od %></td>
+        <td><%= cord_clip.drawing_norm %></td>
+        <td><%= cord_clip.where_used_product %></td>
+        <td><%= cord_clip.where_used_plant %></td>
+        <td><%= cord_clip.remark %></td>
+        <td><%= cord_clip.reason %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate cord_clips %>
+</div>

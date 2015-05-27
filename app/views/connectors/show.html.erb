@@ -1,0 +1,68 @@
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+
+ <%= part_status(@connector) %>
+    <b>Partnumber:</b>
+    <%= @connector.partnumber %>
+  </p>
+
+  <p>
+    <b>Description:</b>
+    <%= @connector.description %>
+  </p>
+
+  <p>
+    <b>Connector type:</b>
+    <%= @connector.connector_type %>
+  </p>
+
+  <p>
+    <b>Drawing norm:</b>
+    <%= @connector.drawing_norm %>
+  </p>
+
+  <p>
+    <b>H X W:</b>
+    <%= @connector.h_x_w %>
+  </p>
+
+  <p>
+    <b>Supplier:</b>
+    <%= @connector.supplier %>
+  </p>
+
+  <p>
+    <b>Where used product:</b>
+    <%= @connector.where_used_product %>
+  </p>
+<p>
+    <b>Where used plant:</b>
+    <%= @connector.where_used_plant %>
+  </p>
+  <br />
+
+  <p>
+    <b>Reason for submission:</b>
+    <%= @connector.reason %>
+  </p><br />
+
+  <p>
+    <b>Submitted by:</b>
+    <%= @connector.uploader_name %>
+  </p>
+
+  <p>
+    <b>Created at:</b>
+    <%= @connector.created_at %>
+  </p>
+
+  <p>
+    <b>Last updated at:</b>
+    <%= @connector.updated_at %>
+  </p>
+
+<%= render 'shared/show_actions', :object => @connector %>

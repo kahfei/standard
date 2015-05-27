@@ -1,0 +1,109 @@
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+
+ <%= part_status(@cord) %>
+
+<p>
+  <strong>Partnumber:</strong>
+  <%= @cord.partnumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cord.description %>
+</p>
+
+<p>
+  <strong>Cord mat:</strong>
+  <%= @cord.cord_mat %>
+</p>
+
+<p>
+  <strong>Cord type:</strong>
+  <%= @cord.cord_type %>
+</p>
+
+<p>
+  <strong>Plug type:</strong>
+  <%= @cord.plug_type %>
+</p>
+
+<p>
+  <strong>Polarity:</strong>
+  <%= @cord.polarity %>
+</p>
+
+<p>
+  <strong>Cross sec:</strong>
+  <%= @cord.cross_sec %>
+</p>
+
+<p>
+  <strong>Cord od:</strong>
+  <%= @cord.cord_od %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @cord.length %>
+</p>
+
+<p>
+  <strong>Dismantled length:</strong>
+  <%= @cord.dismantled_length %>
+</p>
+
+<p>
+  <strong>Switch con:</strong>
+  <%= @cord.switch_con %>
+</p>
+
+<p>
+  <strong>Drawing norm:</strong>
+  <%= @cord.drawing_norm %>
+</p>
+
+<p>
+  <strong>Where used product:</strong>
+  <%= @cord.where_used_product %>
+</p>
+
+<p>
+  <strong>Where used plant:</strong>
+  <%= @cord.where_used_plant %>
+</p>
+
+<p>
+  <strong>Cord spec:</strong>
+  <%= @cord.cord_spec %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @cord.remark %>
+</p><br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @cord.reason %>
+  </p><br />
+
+  <p>
+    <b>Submitted by:</b>
+    <%= @cord.uploader_name %>
+  </p>
+
+  <p>
+    <b>Created at:</b>
+    <%= @cord.created_at %>
+  </p>
+
+  <p>
+    <b>Last updated at:</b>
+    <%= @cord.updated_at %>
+  </p>
+<%= render 'shared/show_actions', :object => @cord %>

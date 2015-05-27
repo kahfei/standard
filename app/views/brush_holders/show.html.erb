@@ -1,0 +1,74 @@
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+
+ <%= part_status(@brush_holder) %>
+<p>
+  <b>Partnumber:</b>
+  <%= @brush_holder.partnumber %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @brush_holder.description %>
+</p>
+
+<p>
+  <b>Brush holder type:</b>
+  <%= @brush_holder.brush_holder_type %>
+</p>
+
+<p>
+  <b>Material:</b>
+  <%= @brush_holder.material %>
+</p>
+
+<p>
+  <b>Drawing norm:</b>
+  <%= @brush_holder.drawing_norm %>
+</p>
+
+<p>
+  <b>Corresponding carbon brush:</b>
+  <%= @brush_holder.corresponding_carbon_brush %>
+</p>
+
+<p>
+  <b>Supplier:</b>
+  <%= @brush_holder.supplier %>
+</p>
+
+<p>
+  <b>Where used product:</b>
+  <%= @brush_holder.where_used_product %>
+</p>
+
+<p>
+  <b>Where used plant:</b>
+  <%= @brush_holder.where_used_plant %>
+</p><br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @brush_holder.reason %>
+  </p><br />
+
+<p>
+    <b>Submitted by:</b>
+    <%= @brush_holder.uploader_name %>
+  </p>
+
+  <p>
+    <b>Created at:</b>
+    <%= @brush_holder.created_at %>
+  </p>
+
+  <p>
+    <b>Last updated at:</b>
+    <%= @brush_holder.updated_at %>
+  </p>
+
+<%= render 'shared/show_actions', :object => @brush_holder %>

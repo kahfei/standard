@@ -1,0 +1,97 @@
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+
+ <%= part_status(@screw) %>
+
+<p>
+  <strong>Partnumber:</strong>
+  <%= @screw.partnumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @screw.description %>
+</p>
+
+<p>
+  <strong>Screw drive:</strong>
+  <%= @screw.screw_drive %>
+</p>
+
+<p>
+  <strong>Screw head:</strong>
+  <%= @screw.screw_head %>
+</p>
+
+<p>
+  <strong>Thread type:</strong>
+  <%= @screw.thread_type %>
+</p>
+
+<p>
+  <strong>Screw size:</strong>
+  <%= @screw.screw_size %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @screw.length %>
+</p>
+
+<p>
+  <strong>Connection material:</strong>
+  <%= @screw.connection_material %>
+</p>
+
+<p>
+  <strong>Coating:</strong>
+  <%= @screw.coating %>
+</p>
+
+<p>
+  <strong>Drawing norm:</strong>
+  <%= @screw.drawing_norm %>
+</p>
+
+<p>
+  <strong>Where used product:</strong>
+  <%= @screw.where_used_product %>
+</p>
+
+<p>
+  <strong>Where used plant:</strong>
+  <%= @screw.where_used_plant %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @screw.remark %>
+</p>
+
+<br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @screw.reason %>
+  </p><br />
+
+  <p>
+    <b>Submitted by:</b>
+    <%= @screw.uploader_name %>
+  </p>
+
+  <p>
+    <b>Created at:</b>
+    <%= @screw.created_at %>
+  </p>
+
+  <p>
+    <b>Last updated at:</b>
+    <%= @screw.updated_at %>
+  </p>
+
+<%= render 'shared/show_actions', :object => @screw %>

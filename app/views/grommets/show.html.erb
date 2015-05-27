@@ -1,0 +1,85 @@
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+
+<% end %>
+
+ <%= part_status(@grommet) %>
+
+<p>
+  <strong>Partnumber:</strong>
+  <%= @grommet.partnumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @grommet.description %>
+</p>
+
+<p>
+  <strong>Inner hole diameter:</strong>
+  <%= @grommet.inner_hole_diameter %>
+</p>
+
+<p>
+  <strong>Grommet type:</strong>
+  <%= @grommet.grommet_type %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @grommet.length %>
+</p>
+
+<p>
+  <strong>For cord od:</strong>
+  <%= @grommet.for_cord_od %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @grommet.material %>
+</p>
+
+<p>
+  <strong>Drawing norm:</strong>
+  <%= @grommet.drawing_norm %>
+</p>
+
+<p>
+  <strong>Where used product:</strong>
+  <%= @grommet.where_used_product %>
+</p>
+
+<p>
+  <strong>Where used plant:</strong>
+  <%= @grommet.where_used_plant %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @grommet.remark %>
+</p><br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @grommet.reason %>
+  </p><br />
+
+  <p>
+    <b>Submitted by:</b>
+    <%= @grommet.uploader_name %>
+  </p>
+
+  <p>
+    <b>Created at:</b>
+    <%= @grommet.created_at %>
+  </p>
+
+  <p>
+    <b>Last updated at:</b>
+    <%= @grommet.updated_at %>
+  </p>
+
+<%= render 'shared/show_actions', :object => @grommet %>

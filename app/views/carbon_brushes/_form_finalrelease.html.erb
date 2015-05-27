@@ -1,0 +1,101 @@
+<br />
+<h2>This part is waiting to get released!</h2>
+<br />
+
+<p>
+  <strong>Partnumber:</strong>
+  <%= @carbon_brush.partnumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @carbon_brush.description %>
+</p>
+
+<p>
+  <strong>Components:</strong>
+  <%= @carbon_brush.components %>
+</p>
+
+<p>
+  <strong>Cross sec:</strong>
+  <%= @carbon_brush.cross_sec %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @carbon_brush.length %>
+</p>
+
+<p>
+  <strong>Wire length or spring free length:</strong>
+  <%= @carbon_brush.wire_length_or_spring_free_length %>
+</p>
+
+<p>
+  <strong>Radius for commutator mm:</strong>
+  <%= @carbon_brush.radius_for_commutator_mm %>
+</p>
+
+<p>
+  <strong>Cut off:</strong>
+  <%= @carbon_brush.cut_off %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @carbon_brush.supplier %>
+</p>
+
+<p>
+  <strong>Drawing norm:</strong>
+  <%= @carbon_brush.drawing_norm %>
+</p>
+
+<p>
+  <strong>Where used product:</strong>
+  <%= @carbon_brush.where_used_product %>
+</p>
+
+<p>
+  <strong>Where used plant:</strong>
+  <%= @carbon_brush.where_used_plant %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @carbon_brush.remark %>
+</p><br />
+
+<p>
+    <b>Reason for submission:</b>
+    <%= @carbon_brush.reason %>
+  </p><br />
+
+  <% if session[:user_role] == "Sectionhead" && @carbon_brush.uploader_role == "Normal" && @carbon_brush.release_status == "approved draft" && @carbon_brush.uploaded_by_section == session[:user_section] %> 
+
+    <%= form_for(@carbon_brush) do |f| %>
+        <% if @carbon_brush.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@carbon_brush.errors.count, "error") %> prohibited this carbon brush from being saved:</h2>
+
+            <ul>
+            <% @carbon_brush.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+          <div class="field">
+              <%= f.label :Status? %><br />
+              <%= f.text_field :release_status, :value => "released", :readonly => true %>
+          </div>
+          
+          <br />
+
+          <div class="actions">
+            <%= f.submit 'Release Carbon brush', :name => 'create' %>
+          </div>
+      <% end %>
+    <% end %>

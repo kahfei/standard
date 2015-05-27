@@ -1,0 +1,2 @@
+module CarbonBrushesHelper
+end

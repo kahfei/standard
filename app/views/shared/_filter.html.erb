@@ -1,0 +1,22 @@
+
+<%= form_for_filterrific @filterrific, :html => { class: 'form-horizontal'} do |f| %>
+    <div class="row">
+            <%= link_to reset_filterrific_url, class: 'btn btn-default' do %>
+              <span class="glyphicon glyphicon-refresh"></span>
+              Reset Filter
+            <% end %>
+    </div>
+    <% fields = (obj.column_names - (obj.column_names.select { |c| c.start_with? 'need_to_edit_'} << ["created_at","id","updated_at","uploaded_by_section","uploader_role","uploader_name","release_status"]).flatten ) %>
+    <div class="row">
+        <% fields.each do |field| %>
+            <% with_field = "with_" + field %>
+            <div class="col-md-2">
+                <label class="control-label"><%= field.gsub("_"," ").titleize%></label>
+                <%=f.select(with_field.to_sym, @filterrific.select_options[with_field.to_sym], { include_blank: ' - Any - ' }, class: 'form-control')%>
+            </div>
+        <% end %>
+    </div>
+    <%= render_filterrific_spinner %>
+    </div>
+
+<% end %>

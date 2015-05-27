@@ -1,0 +1,46 @@
+<div id="filterrific_results" %>
+<div><%= page_entries_info copperwires %></div>
+
+<table class="table table-hover">
+  <tr class="active">
+    <th class="text-center">Partnumber</th>
+    <th class="text-center">Status</th>
+    <th class="text-center">Description</th>
+    <th class="text-center">Copperwire type</th>
+    <th class="text-center">Self bonded</th>
+    <th class="text-center">Diameter</th>
+    <th class="text-center">Drawing norm</th>
+    <th class="text-center">Supplier</th>
+    <th class="text-center">Where used product</th>
+    <th class="text-center">Where used plant</th>
+    <th class="text-center">Reason</th>
+
+    
+  </tr>
+
+<% copperwires.each do |copperwire| %>
+  <% if copperwire.release_status == "needs editing" && copperwire.uploader_name == session[:user_name] %>
+    <tr class="danger">
+  <% elsif copperwire.release_status == "pending" && session[:user_role] == "Sectionhead" && copperwire.uploader_role == "Normal" && copperwire.uploaded_by_section == session[:user_section] || session[:user_role] == "Departmenthead" && copperwire.uploader_role == "Sectionhead" && copperwire.release_status == "pending" %>
+    <tr class="warning">
+  <% elsif copperwire.release_status == "pending" || copperwire.release_status == "needs editing" %>
+    <tr class="pending_parts">
+  <% else %>
+    <tr>
+  <% end %>
+        <td><%= link_to "#{copperwire.partnumber}", copperwire, method: :get %></td>
+        <td><%= copperwire.release_status %></td>
+        <td><%= copperwire.description %></td>
+        <td><%= copperwire.copperwire_type %></td>
+        <td><%= copperwire.self_bonded %></td>
+        <td><%= copperwire.diameter %></td>
+        <td><%= copperwire.drawing_norm %></td>
+        <td><%= copperwire.supplier %></td>
+        <td><%= copperwire.where_used_product %></td>
+        <td><%= copperwire.where_used_plant %></td>
+        <td><%= copperwire.reason %></td>
+    </tr>
+<% end %>
+</table>
+<%= will_paginate copperwires %>
+</div>
