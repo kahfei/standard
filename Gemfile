@@ -19,6 +19,8 @@ gem 'sprockets'
 # to solve typeobject issue in windows
 gem 'coffee-script-source', '1.8.0'
 
+gem 'rails_12factor', group: :production
+
 group :assets do
   gem 'coffee-rails'
 end
